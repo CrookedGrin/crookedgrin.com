@@ -1,0 +1,26 @@
+doctype html
+html
+	head
+		script(src='http://code.jquery.com/jquery-1.11.3.min.js')
+		script.
+			$.fn.serializeObject = function()
+			{
+			   var o = {};
+			   var a = this.serializeArray();
+			   $.each(a, function() {
+			       if (o[this.name]) {
+			           if (!o[this.name].push) {
+			               o[this.name] = [o[this.name]];
+			           }
+			           o[this.name].push(this.value || '');
+			       } else {
+			           o[this.name] = this.value || '';
+			       }
+			   });
+			   return o;
+			};
+		link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css')
+		block title
+			title CrookedGrin.com API
+	body
+		block content

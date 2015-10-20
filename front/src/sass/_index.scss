@@ -1,0 +1,68 @@
+h1.header {
+	width: 100%;
+	text-align: center;
+	padding-left: 50px;
+	padding-top: 11px;
+}
+
+.navbar {
+	background: $green url('../images/navbar_bg.png') no-repeat;
+	background-size: contain;
+	position: relative;
+	width: 100%;
+	top: 45px;
+	border-radius: 0;
+	border-top-right-radius: 20px;
+}
+
+.navbar-brand {
+	display: block;
+	width: 100px;
+	height: 100px;
+	background: url('../images/cg_logo_onwhite.png') no-repeat;
+	background-size: contain;
+	position: absolute;
+	top: -38px;
+	left: -20px;
+	z-index: 100;
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	&:hover {
+		width: 105px;
+		height: 105px;
+		-webkit-transform: rotate(-15deg);
+		transform: rotate(-15deg);
+	}
+}
+
+.navbar-nav {
+	display: block;
+	position: absolute;
+	top: -24px;
+	right: 24px;
+	text-transform: uppercase;
+	font-weight: bold;
+	>li>a {
+		transition: all 0.25s;
+		-webkit-transition: all 0.25s;
+		padding: 0 0 0 16px;
+		color: $brown;
+		opacity: 0.5;
+		&:hover {
+			opacity: 1;
+			color: $orange !important;
+			background: transparent;
+			text-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+		}
+	}
+
+}
+
+.nav>li>a:focus, .nav>li>a:hover {background: none; color: $orange;}
+
+
+.content-wrapper {
+	position: relative;
+	top: 28px;
+	min-height: 200px;
+}

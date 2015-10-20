@@ -1,0 +1,162 @@
+body {
+  font-family: 'Lato', sans-serif;
+  color: #6d4e60;
+}
+
+a {
+  color: #b1646d;
+}
+a:hover {
+  color: #eea785;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 25px;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.textshadow {
+  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.25);
+}
+
+.title {
+  font-family: 'Quicksand', sans-serif !important;
+}
+
+.red {
+  color: #b1646d;
+}
+
+.purple {
+  color: #6d4e60;
+}
+
+.orange {
+  color: #eea785;
+}
+
+.brown {
+  color: #ad8f89;
+}
+
+.white {
+  color: #fff;
+}
+
+h1.header {
+  width: 100%;
+  text-align: center;
+  padding-left: 50px;
+  padding-top: 11px;
+}
+
+.navbar {
+  background: #c4d4c7 url("../images/navbar_bg.png") no-repeat;
+  background-size: contain;
+  position: relative;
+  width: 100%;
+  top: 45px;
+  border-radius: 0;
+  border-top-right-radius: 20px;
+}
+
+.navbar-brand {
+  display: block;
+  width: 100px;
+  height: 100px;
+  background: url("../images/cg_logo_onwhite.png") no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: -38px;
+  left: -20px;
+  z-index: 100;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+.navbar-brand:hover {
+  width: 105px;
+  height: 105px;
+  -webkit-transform: rotate(-15deg);
+  transform: rotate(-15deg);
+}
+
+.navbar-nav {
+  display: block;
+  position: absolute;
+  top: -24px;
+  right: 24px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.navbar-nav > li > a {
+  transition: all 0.25s;
+  -webkit-transition: all 0.25s;
+  padding: 0 0 0 16px;
+  color: #ad8f89;
+  opacity: 0.5;
+}
+.navbar-nav > li > a:hover {
+  opacity: 1;
+  color: #eea785 !important;
+  background: transparent;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.nav > li > a:focus, .nav > li > a:hover {
+  background: none;
+  color: #eea785;
+}
+
+.content-wrapper {
+  position: relative;
+  top: 28px;
+  min-height: 200px;
+}
+
+.content {
+  padding: 30px;
+  margin-bottom: 4px;
+  background: url("../images/content_bg.png") no-repeat;
+  background-size: 100% 100%;
+}
+
+.hero {
+  position: relative;
+  background: #6d4e60 url("../images/hero.jpg") no-repeat 50% 50%;
+  background-size: 120% auto;
+  height: 400px;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  display: block;
+  text-align: center;
+  vertical-align: middle;
+}
+.hero:hover {
+  background-size: 100% auto;
+}
+.hero:hover .view-projects {
+  background-size: 100% 100%;
+}
+
+.view-projects {
+  display: block;
+  position: absolute;
+  width: 300px;
+  height: 78px;
+  top: 161px;
+  left: 50%;
+  margin-left: -150px;
+  background: transparent url("../images/view_projects.png") no-repeat 50% 50%;
+  background-size: 90% 90%;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+
+/*# sourceMappingURL=main.css.map */

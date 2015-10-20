@@ -1,0 +1,50 @@
+extends ./apiLayout.jade
+
+block title
+	title Project Entry Form
+
+block content
+	div.well
+		h3 Project Entry Form
+		form(id='form' name='add-project', method='POST', action='/api/project', role='form')
+			
+			fieldset.form-group
+				label(for='id') ID
+				input.form-control(type='text', name='id', id='id')
+			fieldset.form-group
+				label(for='name') Name
+				input.form-control(type='text', name='name', id='name')
+			fieldset.form-group
+				label(for='desc') Description
+				input.form-control(type='textarea', name='desc', id='desc')
+			fieldset.form-group
+				label(for='desc') URL
+				input.form-control(type='text', name='url', id='url')
+			fieldset.form-group
+				label(for='tags') Tags
+				input.form-control(type='text', name='tags', id='tags')
+			fieldset.form-group
+				input.form-control(type='submit' value='Add Project')
+		hr
+		a(href='/api/logout') Logout
+	script.
+		//comment
+		$("form").submit(function(event) {
+			event.preventDefault(); 
+			var tags = $('#tags').val().split(",");
+			var serialized = $(this).serializeObject();
+			serialized.tags = tags;
+			var jsonData = JSON.stringify(serialized);
+			$.ajax({
+				type: "POST",
+				url: '/api/project', 
+				contentType: 'application/json',
+				data: jsonData,
+				success: function(data) {
+					alert("Success: " + data.success + '; ' + data.msg);
+				},
+				failure: function(err) {
+					alert("Failed: " + err);
+				}
+			});
+		});

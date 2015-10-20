@@ -1,0 +1,24 @@
+extends ./apiLayout.jade
+
+block title
+	title API Signup
+
+block content
+	div.well
+		h3 API Signup
+		if message.length>0
+			div.alert.alert-danger #{message}
+
+		form(id='form' name='signup', method='POST', action='/api/signup', role='form')
+			
+			fieldset.form-group
+				label(for='id') Email
+				input.form-control(type='text', name='email', id='email')
+			fieldset.form-group
+				label(for='name') Password
+				input.form-control(type='password', name='password', id='password')
+			fieldset.form-group
+				input.form-control(type='submit' value='Sign Up')
+
+		hr
+		p Already have an account? <a href='/api/login'>Login</a>

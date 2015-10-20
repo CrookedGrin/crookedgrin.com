@@ -1,0 +1,60 @@
+extends ./apiLayout.jade
+
+block title
+	title Project Delete Form
+
+block content
+	div.well
+		h3 Project Delete Form
+		form(id='form' name='add-project', method='POST', action='/api/project', role='form')
+			fieldset.form-group
+				label(for='objs') Existing projects
+				select.form-control(type='text', name='objs', id='objs')
+					option(value='')
+			fieldset.form-group
+				label(for='id') ID
+				input.form-control(type='text', name='id', id='id')
+			fieldset.form-group
+				label(for='name') Name
+				input.form-control(type='text', name='name', id='name')
+			fieldset.form-group
+				label(for='desc') Description
+				input.form-control(type='textarea', name='desc', id='desc')
+			fieldset.form-group
+				label(for='desc') URL
+				input.form-control(type='text', name='url', id='url')
+			fieldset.form-group
+				input.form-control(type='submit' value='Delete Project', id='submit' disabled)
+	script.
+		//comment
+		$.getJSON('/api/projects', function(result) {
+			var projectDropdown = $('#objs');
+			projectDropdown.change(function(e) {
+				var obj = $(this.selectedOptions[0]).data('value');
+				$('#id').val(obj.id);
+				$('#name').val(obj.name);
+				$('#desc').val(obj.desc);
+				$('#url').val(obj.url);
+				$('#submit').removeAttr('disabled');
+			});
+			$.each(result, function(i, obj) {
+				var option = $('<option />').val(obj).text(obj.id + ': ' + obj.name).data('value', obj);
+				projectDropdown.append(option);
+			});
+		});
+		$("form").submit(function(event) {
+			event.preventDefault(); 
+			var jsonData = JSON.stringify($(this).serializeObject());
+			$.ajax({
+				type: "DELETE",
+				url: '/api/project', 
+				contentType: 'application/json',
+				data: jsonData,
+				success: function(data) {
+					alert("Success: " + data.success + '; ' + data.msg);
+				},
+				failure: function(err) {
+					alert("Failed: " + err);
+				}
+			});
+		});

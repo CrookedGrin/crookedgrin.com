@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" ng-app="cg">
+<head>
+    <meta charset="UTF-8">
+    <base href="/">
+
+    <title>Crooked Grin</title>
+
+    <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Quicksand:400,700|Lato:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="libs/angular/angular.min.js"></script>
+    <script src="libs/angular-route/angular-route.min.js"></script>
+
+    
+    <script src="js/app.js"></script>
+    <script src="js/services/ProjectService.js"></script>
+    <script src="js/controllers/MainCtrl.js"></script>
+    <script src="js/controllers/ProjectCtrl.js"></script>
+</head>
+<body>
+<div class="container">
+
+    <nav class="navbar">
+            <ul class="nav navbar-nav uppercase title">
+                <li><a href="/">Home</a></li>
+                <li><a href="/projects">Projects</a></li>
+                <li><a href="/projects">Contact</a></li>
+                <li><a href="/projects">Blog</a></li>
+            </ul>
+            <a class="navbar-brand" href="/"></a>
+            <h1 class="title header uppercase textshadow"><span class="purple">Crooked Grin</span>&nbsp; &nbsp;<span class="red">Design</span> <span class="white">+</span> <span class="red">Development</span></h1>
+
+    </nav>
+
+    <div class="content-wrapper" ng-view></div>
+
+</div>
+</body>
+</html>
