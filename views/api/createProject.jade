@@ -21,12 +21,17 @@ block content
 				label(for='desc') URL
 				input.form-control(type='text', name='url', id='url')
 			fieldset.form-group
+				label(for='github') Github
+				input.form-control(type='text', name='github', id='github')
+			fieldset.form-group
 				label(for='tags') Tags
 				input.form-control(type='text', name='tags', id='tags')
 			fieldset.form-group
 				input.form-control(type='submit' value='Add Project')
 		hr
-		a(href='/api/logout') Logout
+		a(href='/api/logout') Logout | 
+		a(href='/api/updateProject') Update | 
+		a(href='/api/updateProject') Delete
 	script.
 		//comment
 		$("form").submit(function(event) {

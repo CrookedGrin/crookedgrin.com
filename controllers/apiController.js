@@ -43,7 +43,6 @@ module.exports = function(app, Project, passport) {
 	});
 
 	app.get('/api/projects', function(req, res) {
-		console.log('Get projects.');
 		Project.find({}, function(err, projects) {
 			if (err) throw err;
 			res.json(projects);

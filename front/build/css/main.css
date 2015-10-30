@@ -1,3 +1,7 @@
+html {
+  min-width: 400px;
+}
+
 body {
   font-family: 'Lato', sans-serif;
   color: #6d4e60;
@@ -11,6 +15,7 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5, h6 {
+  font-family: 'Quicksand', sans-serif;
   margin: 0;
 }
 
@@ -53,8 +58,9 @@ h1 {
 h1.header {
   width: 100%;
   text-align: center;
-  padding-left: 50px;
-  padding-top: 11px;
+  padding-left: 90px;
+  padding-right: 40px;
+  font-size: 18px;
 }
 
 .navbar {
@@ -62,35 +68,38 @@ h1.header {
   background-size: contain;
   position: relative;
   width: 100%;
-  top: 45px;
+  top: 35px;
+  min-height: 40px;
   border-radius: 0;
   border-top-right-radius: 20px;
+  z-index: 10;
 }
 
 .navbar-brand {
   display: block;
-  width: 100px;
-  height: 100px;
   background: url("../images/cg_logo_onwhite.png") no-repeat;
+  image-rendering: auto;
   background-size: contain;
   position: absolute;
-  top: -38px;
-  left: -20px;
   z-index: 100;
-  transition: all 0.5s;
-  -webkit-transition: all 0.5s;
+  transition: all 0.33s;
+  -webkit-transition: all 0.33s;
+  top: -32px;
+  left: -15px;
+  width: 94px;
+  height: 94px;
+  -webkit-transform: rotate(-5deg) scale(1);
+  transform: rotate(-5deg) scale(1);
 }
 .navbar-brand:hover {
-  width: 105px;
-  height: 105px;
-  -webkit-transform: rotate(-15deg);
-  transform: rotate(-15deg);
+  -webkit-transform: rotate(-20deg) scale(1.1);
+  transform: rotate(-20deg) scale(1.1);
 }
 
 .navbar-nav {
   display: block;
   position: absolute;
-  top: -24px;
+  top: -30px;
   right: 24px;
   text-transform: uppercase;
   font-weight: bold;
@@ -107,6 +116,8 @@ h1.header {
   color: #eea785 !important;
   background: transparent;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  -webkit-transform: rotate(-5deg) scale(1.1);
+  transform: rotate(-5deg) scale(1.1);
 }
 
 .nav > li > a:focus, .nav > li > a:hover {
@@ -115,21 +126,121 @@ h1.header {
 }
 
 .content-wrapper {
-  position: relative;
-  top: 28px;
+  display: block;
+  position: absolute;
+  width: 100%;
+  padding-right: 30px;
+  top: 79px;
   min-height: 200px;
+  min-width: 385px;
+  overflow: hidden !important;
 }
 
+@media (min-width: 550px) {
+  h1.header {
+    padding-top: 11px;
+  }
+}
+@media (min-width: 768px) {
+  h1.header {
+    font-size: 25px;
+  }
+
+  .content-wrapper {
+    width: 750px;
+    top: 98px;
+  }
+
+  .navbar {
+    width: 100%;
+    top: 45px;
+    height: 50px;
+  }
+
+  .navbar-nav {
+    top: -24px;
+    right: 24px;
+  }
+
+  .navbar-brand {
+    width: 110px;
+    height: 110px;
+    top: -37px;
+    left: -30px;
+  }
+}
+@media (min-width: 992px) {
+  .content-wrapper {
+    width: 970px;
+  }
+
+  .navbar-brand {
+    width: 120px;
+    height: 120px;
+    top: -41px;
+    left: -36px;
+  }
+}
+@media (min-width: 1200px) {
+  .content-wrapper {
+    width: 1170px;
+  }
+}
 .content {
+  display: block;
+  position: relative;
   padding: 30px;
   margin-bottom: 4px;
   background: url("../images/content_bg.png") no-repeat;
   background-size: 100% 100%;
 }
 
+.gradient-bg {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#eec3ac+0,e3e6db+100 */
+  background: #e3e6db url("../images/hero.jpg") no-repeat;
+}
+
+.page-header {
+  font-size: 21px;
+  color: #ad8f89;
+  width: 100%;
+  text-align: center;
+  margin-top: 0;
+}
+
+.link-button {
+  display: inline-block;
+  border-radius: 7px;
+  border: 1px solid white;
+  background: rgba(255, 255, 255, 0.75);
+  padding: 1px 3px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  color: #6d4e60 !important;
+  text-transform: uppercase;
+  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.25);
+  transition: all 0.35s;
+  text-decoration: none !important;
+}
+.link-button:hover {
+  color: #b1646d !important;
+  z-index: 10;
+  transform: scale(1.15) rotate(-3deg);
+  -webkit-box-shadow: 0px 7px 25px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 7px 25px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 7px 25px 0px rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 768px) {
+  .link-button {
+    font-size: 14px;
+    padding: 2px 5px;
+  }
+}
 .hero {
   position: relative;
-  background: #6d4e60 url("../images/hero.jpg") no-repeat 50% 50%;
+  background: #e3e6db url("../images/hero.jpg") no-repeat 50% 50%;
   background-size: 120% auto;
   height: 400px;
   transition: all 0.5s;
@@ -144,8 +255,7 @@ h1.header {
 .hero:hover .view-projects {
   background-size: 100% 100%;
 }
-
-.view-projects {
+.hero .view-projects {
   display: block;
   position: absolute;
   width: 300px;
@@ -157,6 +267,179 @@ h1.header {
   background-size: 90% 90%;
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
+}
+
+figure.project {
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 2em;
+  color: white;
+  border: 1px solid white;
+  -webkit-box-shadow: 0px 7px 25px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 7px 25px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 7px 25px 0px rgba(0, 0, 0, 0.5);
+  transition: all 0.35s;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#693b41+0,43303b+100&amp;0.75+0,0.9+100 */
+  background: -moz-radial-gradient(center, ellipse cover, rgba(105, 59, 65, 0.75) 0%, rgba(67, 48, 59, 0.9) 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(105, 59, 65, 0.75)), color-stop(100%, rgba(67, 48, 59, 0.9)));
+  /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(105, 59, 65, 0.75) 0%, rgba(67, 48, 59, 0.9) 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(center, ellipse cover, rgba(105, 59, 65, 0.75) 0%, rgba(67, 48, 59, 0.9) 100%);
+  /* Opera 12+ */
+  background: -ms-radial-gradient(center, ellipse cover, rgba(105, 59, 65, 0.75) 0%, rgba(67, 48, 59, 0.9) 100%);
+  /* IE10+ */
+  background: radial-gradient(ellipse at center, rgba(105, 59, 65, 0.75) 0%, rgba(67, 48, 59, 0.9) 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bf693b41', endColorstr='#e643303b',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+}
+figure.project::before, figure.project::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  right: 3px;
+  bottom: 3px;
+  opacity: 0;
+  transition: all 0.5s;
+  z-index: 100;
+  pointer-events: none;
+}
+figure.project::before {
+  border-top: 1px solid #eec3ac;
+  border-bottom: 1px solid #eec3ac;
+  transform: scale(0, 1);
+}
+figure.project::after {
+  border-left: 1px solid #eec3ac;
+  border-right: 1px solid #eec3ac;
+  transform: scale(1, 0);
+}
+figure.project:hover::before, figure.project:hover::after {
+  opacity: 1;
+  transform: scale(1);
+}
+figure.project .thumb::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&amp;0+50,0.35+100 */
+  background: -moz-radial-gradient(center, ellipse cover, transparent 0%, transparent 50%, rgba(0, 0, 0, 0.35) 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, transparent), color-stop(50%, transparent), color-stop(100%, rgba(0, 0, 0, 0.35)));
+  /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(center, ellipse cover, transparent 0%, transparent 50%, rgba(0, 0, 0, 0.35) 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(center, ellipse cover, transparent 0%, transparent 50%, rgba(0, 0, 0, 0.35) 100%);
+  /* Opera 12+ */
+  background: -ms-radial-gradient(center, ellipse cover, transparent 0%, transparent 50%, rgba(0, 0, 0, 0.35) 100%);
+  /* IE10+ */
+  background: radial-gradient(ellipse at center, transparent 0%, transparent 50%, rgba(0, 0, 0, 0.35) 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#59000000',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+  content: '';
+  opacity: 1;
+  transition: opacity 0.65s, transform 0.35s;
+}
+figure.project .thumb {
+  position: absolute;
+  width: 25%;
+  overflow: hidden;
+  transition: all 0.35s;
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  top: 7px;
+  left: 7px;
+  bottom: 7px;
+}
+figure.project .thumb img {
+  width: 100%;
+  height: auto;
+}
+figure.project .thumb img:hover a {
+  color: #fff;
+  transform: translate3d(0, -50%, 0) translate3d(0, -40px, 0);
+}
+figure.project .thumb img:hover img::before {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+figure.project figcaption {
+  transition: all 0.35s;
+  padding: 1em;
+  margin-left: 25%;
+  min-height: 80px;
+}
+figure.project figcaption h3 {
+  font-size: 15px;
+  color: #fff;
+  transition: all 0.35s;
+  margin-bottom: 0.75em;
+  padding-bottom: 0.25em;
+}
+figure.project figcaption p {
+  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.25);
+  color: #eec3ac;
+  transition: all 0.35s;
+  margin-bottom: 0.5em;
+}
+figure.project figcaption a {
+  color: #f48996;
+}
+figure.project:hover {
+  -webkit-box-shadow: 0px 7px 25px 0px black;
+  -moz-box-shadow: 0px 7px 25px 0px black;
+  box-shadow: 0px 7px 25px 0px black;
+}
+figure.project:hover .thumb.colored {
+  opacity: 0;
+}
+figure.project:hover .thumb::before {
+  opacity: 0.5;
+}
+figure.project .button-bar {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+figure.project .button-bar .link-button {
+  margin-left: 0.25em;
+}
+
+@media (min-width: 550px) {
+  figure.project figcaption {
+    padding: 1em;
+  }
+  figure.project figcaption h3 {
+    font-size: 20px;
+  }
+}
+@media (min-width: 768px) {
+  figure.project figcaption {
+    padding: 2em;
+  }
+  figure.project figcaption h3 {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.75);
+  }
+  figure.project .button-bar {
+    bottom: 20px;
+    right: 20px;
+  }
+}
+.ng-enter {
+  animation: fadeIn 0.5s;
+}
+
+.ng-leave {
+  animation: fadeOut 0.5s;
 }
 
 /*# sourceMappingURL=main.css.map */

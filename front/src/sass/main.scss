@@ -1,9 +1,19 @@
 $green : #c4d4c7;
+$palegreen: #e3e6db;
 $purple: #6d4e60;
 $red: #b1646d;
+$palered: #f48996;
 $orange: #eea785;
+$paleorange: #eec3ac;
 $brown: #ad8f89;
 $white: #fff;
+$translucentwhite: rgba(255,255,255,0.75);
+
+$textshadow: 0px 0px 6px rgba(0, 0, 0, 0.25);
+
+html {
+	min-width: 400px;
+}
 
 body {
 	font-family: 'Lato', sans-serif;
@@ -18,6 +28,7 @@ a {
 }
 
 h1, h2, h3, h4, h5, h6 {
+	font-family: 'Quicksand', sans-serif;
 	margin: 0;
 }
 h1 {
@@ -29,7 +40,7 @@ h1 {
 }
 
 .textshadow {
-	text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.25);
+	text-shadow: $textshadow;
 }
 
 .title {
@@ -45,3 +56,6 @@ h1 {
 
 @import 'index';
 @import 'content';
+@import 'home';
+@import 'projects';
+@import 'animation';

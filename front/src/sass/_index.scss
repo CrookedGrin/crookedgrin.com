@@ -1,8 +1,9 @@
 h1.header {
 	width: 100%;
 	text-align: center;
-	padding-left: 50px;
-	padding-top: 11px;
+	padding-left: 90px;
+	padding-right: 40px;
+	font-size: 18px;
 }
 
 .navbar {
@@ -10,35 +11,39 @@ h1.header {
 	background-size: contain;
 	position: relative;
 	width: 100%;
-	top: 45px;
+	top: 35px;
+	min-height: 40px;
 	border-radius: 0;
 	border-top-right-radius: 20px;
+	z-index: 10;
 }
 
 .navbar-brand {
 	display: block;
-	width: 100px;
-	height: 100px;
 	background: url('../images/cg_logo_onwhite.png') no-repeat;
+	image-rendering: auto;
 	background-size: contain;
 	position: absolute;
-	top: -38px;
-	left: -20px;
 	z-index: 100;
-	transition: all 0.5s;
-	-webkit-transition: all 0.5s;
+	transition: all 0.33s;
+	-webkit-transition: all 0.33s;
+	top: -32px;
+	left: -15px;
+	width: 94px;
+	height: 94px;
+	-webkit-transform: rotate(-5deg) scale(1);
+	transform: rotate(-5deg) scale(1);
 	&:hover {
-		width: 105px;
-		height: 105px;
-		-webkit-transform: rotate(-15deg);
-		transform: rotate(-15deg);
+		-webkit-transform: rotate(-20deg) scale(1.1);
+		transform: rotate(-20deg) scale(1.1);
 	}
 }
 
+//FIXME: Make mobile version
 .navbar-nav {
 	display: block;
 	position: absolute;
-	top: -24px;
+	top: -30px;
 	right: 24px;
 	text-transform: uppercase;
 	font-weight: bold;
@@ -53,6 +58,8 @@ h1.header {
 			color: $orange !important;
 			background: transparent;
 			text-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+			-webkit-transform: rotate(-5deg) scale(1.1);
+			transform: rotate(-5deg) scale(1.1);
 		}
 	}
 
@@ -62,7 +69,57 @@ h1.header {
 
 
 .content-wrapper {
-	position: relative;
-	top: 28px;
+	display: block;
+	position: absolute;
+	width: 100%;
+	padding-right: 30px;
+	top: 79px;
 	min-height: 200px;
+	min-width: 385px;
+	overflow: hidden !important;
+}
+@media (min-width: 550px) {
+	h1.header {
+		padding-top: 11px;
+	}
+}
+@media (min-width: 768px) {
+	h1.header {
+		font-size: 25px;
+	} 
+	.content-wrapper {
+		width: 750px;
+		top: 98px;
+	}
+	.navbar {
+		width: 100%;
+		top: 45px;
+		height: 50px;
+	}
+	.navbar-nav {
+		top: -24px;
+		right: 24px;
+	}
+	.navbar-brand {
+		width: 110px;
+		height: 110px;
+		top: -37px;
+		left: -30px;
+	}
+}
+@media (min-width: 992px) {
+	.content-wrapper {
+		width: 970px;
+	}
+	.navbar-brand {
+		width: 120px;
+		height: 120px;
+		top: -41px;
+		left: -36px;
+	}
+}
+@media (min-width: 1200px) {
+	.content-wrapper {
+		width: 1170px;
+	}
 }
