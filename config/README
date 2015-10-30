@@ -1,0 +1,1 @@
+Note: database.js is not checked in here because it contains secure user/pass config information. It is necessary in order to actually run the app. The format is as follows: 
