@@ -7,10 +7,9 @@
 	margin-bottom: 4px;
 	background: url('../images/content_bg.png') no-repeat;
 	background-size: 100% 100%;
-
 }
 
-.gradient-bg {
+.content-bg {
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#eec3ac+0,e3e6db+100 */
 	// background: rgb(238,195,172); /* Old browsers */
 	// background: -moz-radial-gradient(center, ellipse cover,  rgba(238,195,172,1) 0%, rgba(227,230,219,1) 100%); /* FF3.6+ */
@@ -20,7 +19,7 @@
 	// background: -ms-radial-gradient(center, ellipse cover,  rgba(238,195,172,1) 0%,rgba(227,230,219,1) 100%); /* IE10+ */
 	// background: radial-gradient(ellipse at center,  rgba(238,195,172,1) 0%,rgba(227,230,219,1) 100%); /* W3C */
 	// filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eec3ac', endColorstr='#e3e6db',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-	background: $palegreen url('../images/hero.jpg') no-repeat;
+	background: $palegreen url('../images/hero.jpg') repeat-y;
 }
 
 .page-header {
@@ -33,12 +32,14 @@
 
 .link-button {
 	display: inline-block;
-	border-radius: 7px;
+	border-radius: 15px;
+	border-bottom-left-radius: 15px;
+	border-top-left-radius: 15px;
 	border: 1px solid white;
 	background: $translucentwhite;
 	padding: 1px 3px;
 	font-family: 'Quicksand', sans-serif;
-	font-weight: 500;
+	font-weight: 600;
 	font-size: 12px;
 	color: $purple !important;
 	text-transform: uppercase;
@@ -58,7 +59,7 @@
 
 @media (min-width: 768px) {
 	.link-button {
-		font-size: 14px;
+		font-size: 13px;
 		padding: 2px 5px;
 	}
 

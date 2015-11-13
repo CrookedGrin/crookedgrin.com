@@ -1,3 +1,10 @@
+.page-wrapper {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -60px;
+}
+
 h1.header {
 	width: 100%;
 	text-align: center;
@@ -13,6 +20,7 @@ h1.header {
 	right: 15px;
 	left: 15px;
 	min-height: 43px;
+	min-width: 355px;
 	border-radius: 0;
 	border-top-right-radius: 20px;
 	z-index: 40;
@@ -82,7 +90,7 @@ h1.header {
 		transition: all 0.25s;
 		-webkit-transition: all 0.25s;
 		padding: 0 0 0 16px;
-		color: $brown;
+		color: $darkgreen;
 		opacity: 0.5;
 		&:hover {
 			opacity: 1;
@@ -105,11 +113,21 @@ h1.header {
 	width: 100%;
 	padding-right: 30px;
 	top: 79px;
-	min-height: 200px;
+	min-height: 600px;
 	min-width: 385px;
 	overflow: hidden !important;
 	z-index: 20;
 }
+
+.footer {
+	display: block;
+	height: 60px;
+	width: 100%;
+	background: $green url('../images/navbar_bg.png') no-repeat;
+	background-size: contain;
+}
+
+
 @media (min-width: 550px) {
 	h1.header {
 		padding-top: 11px;

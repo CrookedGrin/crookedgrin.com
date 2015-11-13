@@ -1,10 +1,35 @@
 // Projects
+
+.projects {
+	min-height: 400px;
+}
+
+.view-toggle {
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	a {
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+		background-size: cover;
+		transition: all 0.35s;
+		&:hover {
+			opacity: 1;
+			transform: scale(1.25);
+		}
+	}
+	a.list {
+		background-image: url('../images/view_toggle_list.png');
+	}
+	a.grid {
+		background-image: url('../images/view_toggle_grid.png');
+	}
+}
+
 figure.project {
-	width: 100%;
-	height: auto;
 	position: relative;
 	overflow: hidden;
-	margin-bottom: 2em;
 	color: white;
 	border: 1px solid white;
 	-webkit-box-shadow: 0px 7px 25px 0px rgba(0,0,0,0.5);
@@ -66,15 +91,11 @@ figure.project {
 	}
 	.thumb {
 		position: absolute;
-		width: 25%;
 		overflow: hidden;
 		transition: all 0.35s;
 		background-size: cover;
 		background-position: 50%;
 		background-repeat: no-repeat;
-		top: 7px;
-		left: 7px;
-		bottom: 7px;
 		img {
 			width: 100%;
 			height: auto;
@@ -90,81 +111,202 @@ figure.project {
 			}
 		}
 	}
-	figcaption {
-		transition: all 0.35s;
-		padding: 1em;
-		margin-left: 25%;
-		min-height: 80px;
-		h3 {
-			font-size: 15px;
-			color: $white;
-			transition: all 0.35s;
-			margin-bottom: 0.75em;
-			padding-bottom: 0.25em;
-		}
-		p {
-			text-shadow: $textshadow;
-			color: $paleorange;
-			transition: all 0.35s;
-			margin-bottom: 0.5em;
-		}
-		a {
-
-			color: $palered;
+	.button-bar {
+		position: absolute;
+		.link-button {
+			margin-left: 0.25em;
 		}
 	}
 	&:hover {
 		-webkit-box-shadow: 0px 7px 25px 0px rgba(0,0,0,1);
 		-moz-box-shadow: 0px 7px 25px 0px rgba(0,0,0,1);
 		box-shadow: 0px 7px 25px 0px rgba(0,0,0,1);
-
 		.thumb.colored {
 			opacity: 0;
-			// transform: scale(1.1);
 		}
 		.thumb::before {
 			opacity: 0.5;
 		}
 	}
-	.button-bar {
-		position: absolute;
-		bottom: 10px;
-		right: 10px;
-		.link-button {
-			margin-left: 0.25em;
+	figcaption {
+		transition: all 0.35s;
+		h3 {
+			font-size: 15px;
+			color: $white;
+			transition: all 0.35s;
+		}
+		p {
+			text-shadow: $textshadow;
+			color: $paleorange;
+			transition: all 0.35s;
+
 		}
 	}
 }
 
 
-
-@media (min-width: 550px) {
-	figure.project {
-		figcaption {
-			padding: 1em;
-			h3 {
-				font-size: 20px;
-			}
+.list-layout {
+	.view-toggle {
+		a.list {
+			opacity: 0.85;
+		}
+		a.grid {
+			opacity: 0.35;
 		}
 	}
-
-}
-@media (min-width: 768px) {
 	figure.project {
-		figcaption {
-			padding: 2em;
-			h3 {
-				border-bottom: 1px solid $translucentwhite;
-			}
+		width: 100%;
+		height: auto;
+		margin-bottom: 2em;
+		.thumb {
+			width: 25%;
+			top: 7px;
+			left: 7px;
+			bottom: 7px;
 		}
 		.button-bar {
-			bottom: 20px;
-			right: 20px;
+			bottom: 10px;
+			right: 10px;
+		}
+		figcaption {
+			margin-left: 25%;
+			min-height: 80px;
+			padding: 1em;
+			h3 {
+				font-size: 15px;
+				margin-bottom: 0.75em;
+				padding-bottom: 0.25em;
+			}
+			p {
+				margin-bottom: 0.5em;
+			}
+		}
+
+	}
+
+
+
+	@media (min-width: 550px) {
+		figure.project {
+			figcaption {
+				padding: 1em;
+				h3 {
+					font-size: 20px;
+				}
+			}
+		}
+
+	}
+	@media (min-width: 768px) {
+		figure.project {
+			figcaption {
+				padding: 2em;
+				h3 {
+					border-bottom: 1px solid $translucentwhite;
+				}
+			}
+			.button-bar {
+				bottom: 20px;
+				right: 20px;
+			}
 		}
 	}
+	@media (min-width: 992px) {
+	}
+	@media (min-width: 1200px) {
+	}
 }
-@media (min-width: 992px) {
+
+.grid-layout {
+	.view-toggle {
+		a.list {
+			opacity: 0.35;
+		}
+		a.grid {
+			opacity: 0.85;
+		}
+	}
+	figure.project {
+		height: 120px;
+		float: left;
+		width: 48%;
+		margin: 0 4% 1em 0;
+		&:nth-child(2n+2) {
+			margin-right: 0;
+		}
+		.thumb {
+			top: 7px;
+			right: 7px;
+			bottom: 70px;
+			left: 7px;
+		}
+		.button-bar {
+			bottom: 7px;
+			right: 7px;
+			left: 7px;
+			text-align: center;
+		}
+		figcaption {
+			position: absolute;
+			bottom: 36px;
+			left: 7px;
+			right: 7px;
+			text-align: center;
+			h3 {
+				display: table;
+				width: 100%;
+				height: 30px;
+				font-size: 13px;
+				span.ng-binding {
+					display: table-cell;
+					width: 100%;
+					vertical-align: middle;
+					text-align: center;
+					height: 30px;
+				}
+			}
+			p {
+				display: none;
+				margin-bottom: 0.5em;
+			}
+		}
+
+	}
+	@media (min-width: 550px) {
+		figure.project {
+			height: 160px;
+		}
+
+	}
+	@media (min-width: 768px) {
+
+	}
+	@media (min-width: 992px) {
+		figure.project {
+			height: 240px;
+			width: 23%;
+			margin: 0 2.65% 1em 0;
+			&:nth-child(2n+2) {
+				margin-right: 2.65%;
+			}
+			&:nth-child(4n+4) {
+				margin-right: 0;
+			}
+			.thumb {
+				
+			}
+		}
+	}
+	@media (min-width: 1200px) {
+	}
+
 }
-@media (min-width: 1200px) {
+.grid-layout::after {
+	content: ' ';
+	display: block;
+	font-size: 0;
+	height: 0;
+	visibility: hidden;
+	clear: both;
 }
 

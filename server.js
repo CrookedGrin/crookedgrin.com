@@ -42,7 +42,7 @@ var apiController = require('./controllers/apiController');
 apiController(app, Project, passport);
 
 app.get('*', function(req, res) {
-	res.sendfile(__dirname + '/front/build/index.html');
+	res.sendFile(__dirname + '/front/build/index.html');
 });
 
 var port = process.env.PORT || 3000;

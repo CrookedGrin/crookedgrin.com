@@ -1,23 +1,38 @@
 
 <div class="content-outer">
-	<div class="content gradient-bg">
+	<div class="projects content content-bg {{layoutClass}}">
+		<div class="view-toggle">
+			<a class="list" href="" ng-click="toggleLayout('list-layout')"></a>
+			<a class="grid" href="" ng-click="toggleLayout('grid-layout')"></a>
+		</div>
 		<h2 class="page-header uppercase textshadow">Projects</h2>
-		<figure class="project" ng-repeat="project in projects">
-			<div class="thumb normal" style='background-image: url("../images/projects/{{project.id}}.jpg")'>
-				<img src="../images/shim.png" />
-			</div>
-			<div class="thumb colored" style='background-image: url("../images/projects/{{project.id}}_colored.jpg")'>
-				<img src="../images/shim.png" />
-			</div>
-			<figcaption>
-				<h3 class="uppercase textshadow"><span>{{project.name}}<span></h3>
-				<p class="hidden-xs">{{project.desc}}</p>
-				<p class="hidden-xs"><b>Tags:</b> {{project.tagsDisplay}}</p>
-			</figcaption>
-			<div class="button-bar">
-				<a class="link-button" href="{{project.github}}" target="_blank" ng-show="project.github">Github</a>
-				<a class="link-button" href="{{project.url}}" target="_blank" ng-show="project.url">Launch</a>
-			</div>
-		</figure>
+		<!--FIXME: Replace with template -->
+		<div class="loading" ng-hide="dataLoaded">
+			<div class="bullet"></div>
+			<div class="bullet"></div>
+			<div class="bullet"></div>
+			<div class="bullet"></div>
+		</div>
+		<div class="projectWrapper">
+			<figure class="project" ng-repeat="project in projects">
+				<div class="thumb normal" style='background-image: url("../images/projects/{{project.id}}.jpg")'>
+					<img src="../images/shim.png" />
+				</div>
+				<div class="thumb colored" style='background-image: url("../images/projects/{{project.id}}_colored.jpg")'>
+					<img src="../images/shim.png" />
+				</div>
+				<figcaption>
+					<h3 class="uppercase textshadow"><span>{{project.name}}<span></h3>
+					<p class="hidden-xs">{{project.desc}}</p>
+					<p class="hidden-xs"><b>Tags:</b> {{project.tagsDisplay}}</p>
+				</figcaption>
+				<div class="button-bar">
+					<a class="link-button" href="{{project.github}}" target="_blank" ng-show="project.github">Github</a>
+					<a class="link-button" href="{{project.url}}" target="_blank" ng-show="project.url">Launch</a>
+				</div>
+			</figure>
+		</div>
 	</div>
 </div>
+<!-- FIXME: Replace with template -->
+<footer class="footer"></footer>

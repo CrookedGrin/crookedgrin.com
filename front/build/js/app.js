@@ -10,6 +10,14 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
 		.when('/projects', {
 			templateUrl: 'partials/projects.html',
 			controller: 'ProjectCtrl'
+		})
+		.when('/contact', {
+			templateUrl: 'partials/contact.html',
+			controller: 'ContactCtrl'
+		})
+		.when('/skillset', {
+			templateUrl: 'partials/skillset.html',
+			controller: 'SkillsetCtrl'
 		});
 
 	$locationProvider.html5Mode(true);
