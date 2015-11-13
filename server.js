@@ -41,6 +41,9 @@ var Project = mongoose.model('Project', projectSchema);
 var apiController = require('./controllers/apiController');
 apiController(app, Project, passport);
 
+var contactController = require('./controllers/contactController');
+contactController(app);
+
 app.get('*', function(req, res) {
 	res.sendFile(__dirname + '/front/build/index.html');
 });
