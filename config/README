@@ -1,1 +1,2 @@
-Note: database.js is not checked in here because it contains secure user/pass config information. It is necessary in order to actually run the app. The format is as follows: 
+Note: database.js and email.js are not up-to-date, as they have been added to .gitignore for security purposes. The format is correct,
+but the actual data is not.
