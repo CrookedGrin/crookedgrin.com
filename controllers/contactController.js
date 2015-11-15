@@ -9,12 +9,11 @@ var nodemailer = require('nodemailer');
 
 module.exports = function(app) {
 
-
 	var transporter = nodemailer.createTransport({
 		service: 'Gmail',
 		auth: {
-			user: configEmail.address,
-			pass: configEmail.password
+			user: configEmail.transportUser,
+			pass: configEmail.transportPass
 		}
 	}, {
 		from: 'contactform@crookedgrin.com'
@@ -22,15 +21,16 @@ module.exports = function(app) {
 	});
 
 	var mailOptions = {
-		from: 'Contact Form <contactform@crookedgrin.com>',
-		to: 'webcontact@crookedgrin.com',
-		subject: 'Web contact form submission',
+		from: 'Contact Form <' + configEmail.fromAddress + ">",
+		to: 'Web Contact' + configEmail.toAddress
 	}
 
 	app.post('/contact', jsonParser, function(req, res) {
 		console.log('Contact form POST recieved. Data: ');
 		console.log('   ' + util.inspect(req.body, false, null));
-		mailOptions.html = "<p>New form contact: " + util.inspect(req.body, false, null) + "</p>";
+		mailOptions.subject = 'Web contact form: ' + req.body.name;
+		mailOptions.html = "<h1>Contact Form Submission</h1>" 
+		mailOptions.html += "<p>" + util.inspect(req.body, false, null) + "</p>";
 		transporter.sendMail(mailOptions, function(error, info) {
 			if (error) {
 				return console.log(error);
