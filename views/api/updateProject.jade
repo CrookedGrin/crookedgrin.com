@@ -30,6 +30,9 @@ block content
 				label(for='tags') Tags
 				input.form-control(type='text', name='tags', id='tags')
 			fieldset.form-group
+				label(for='priority') Priority
+				input.form-control(type='number', name='priority', id='priority')
+			fieldset.form-group
 				input.form-control(type='submit' value='Update Project', id='submit' disabled)
 	script.
 		//comment
@@ -41,7 +44,9 @@ block content
 				$('#name').val(obj.name);
 				$('#desc').val(obj.desc);
 				$('#url').val(obj.url);
+				$('#github').val(obj.github);
 				$('#tags').val(obj.tags.join());
+				$('#priority').val(obj.priority);
 				$('#submit').removeAttr('disabled');
 			});
 			$.each(result, function(i, obj) {
@@ -51,7 +56,10 @@ block content
 		});
 		$("form").submit(function(event) {
 			event.preventDefault(); 
-			var jsonData = JSON.stringify($(this).serializeObject());
+			var tags = $('#tags').val().split(",");
+			var serialized = $(this).serializeObject();
+			serialized.tags = tags;
+			var jsonData = JSON.stringify(serialized);
 			$.ajax({
 				type: "PUT",
 				url: '/api/project', 

@@ -5,10 +5,16 @@
 		<p>Want to get in touch? Send me a request using the form below, and I'll get back to you as soon as I can.</p>
 		<form name="contactForm" novalidate>
 			<fieldset>
-				<label for="name">Name:</label>
+				<label for="name">Name</label>
 				<input name="name" type="text" ng-model="contact.name"/>
+				<label for="email">Email</label>
+				<input name="email" type="text" ng-model="contact.email"/>
+				<label for="message">Message</label>
+				<input class="textarea" name="message" type="textarea" ng-model="contact.message"/>
+				<div class="submit">
+					<a class="link-button" type="submit" ng-click="submit(contact)">Submit</a>
+				</div>
 			</fieldset>
-			<input type="submit" ng-click="submit(contact)" value="Submit"/>
 		</form>
 
 	</div>

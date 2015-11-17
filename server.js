@@ -34,6 +34,7 @@ var projectSchema = new Schema({
 	desc: String,
 	url: String,
 	github: String,
+	priority: Number,
 	tags: Array
 });
 var Project = mongoose.model('Project', projectSchema);

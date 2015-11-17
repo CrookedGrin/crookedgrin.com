@@ -46,6 +46,7 @@
 	text-shadow: $textshadow;
 	transition: all 0.35s;
 	text-decoration: none !important;
+	cursor: pointer;
 	&:hover {
 		color: $red !important;
 		z-index: 10;

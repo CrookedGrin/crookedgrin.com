@@ -154,7 +154,7 @@ h1.header {
 }
 .navbar-nav > li > a:hover {
   opacity: 1;
-  color: #eea785 !important;
+  color: #b1646d !important;
   background: transparent;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
   -webkit-transform: rotate(-5deg) scale(1.1);
@@ -273,6 +273,7 @@ h1.header {
   text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.25);
   transition: all 0.35s;
   text-decoration: none !important;
+  cursor: pointer;
 }
 .link-button:hover {
   color: #b1646d !important;
@@ -318,6 +319,86 @@ h1.header {
   background-size: 90% 90%;
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
+}
+
+.ng-enter {
+  animation: fadeIn 0.5s;
+}
+
+.ng-leave {
+  animation: fadeOut 0.5s;
+}
+
+@-webkit-keyframes loadingAnimIn {
+  0% {
+    -webkit-transform: translateX(-100px);
+    transform: translateX(-100px);
+    opacity: 0;
+    box-shadow: 0 0px 0px transparent;
+  }
+  50% {
+    opacity: 1;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  }
+  100% {
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px);
+    opacity: 0;
+    box-shadow: 0 0px 0px transparent;
+  }
+}
+@keyframes loadingAnimIn {
+  0% {
+    -webkit-transform: translateX(-100px);
+    transform: translateX(-100px);
+    opacity: 0;
+    box-shadow: 0 0px 0px transparent;
+  }
+  50% {
+    opacity: 1;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  }
+  100% {
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px);
+    opacity: 0;
+    box-shadow: 0 0px 0px transparent;
+  }
+}
+.loading {
+  position: absolute;
+  top: calc(50% - 5px);
+  left: 50%;
+}
+
+.loading .bullet {
+  position: absolute;
+  padding: 5px;
+  border-radius: 50%;
+  background: #b1646d;
+  -webkit-animation: loadingAnimIn 1.5s ease-in-out 0s infinite;
+  animation: loadingAnimIn 1.5s ease-in-out 0s infinite;
+  opacity: 0;
+}
+
+.loading .bullet:nth-child(1) {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+.loading .bullet:nth-child(2) {
+  -webkit-animation-delay: .25s;
+  animation-delay: 0.25s;
+}
+
+.loading .bullet:nth-child(3) {
+  -webkit-animation-delay: .5s;
+  animation-delay: 0.5s;
+}
+
+.loading .bullet:nth-child(4) {
+  -webkit-animation-delay: .75s;
+  animation-delay: 0.75s;
 }
 
 .projects {
@@ -608,84 +689,58 @@ figure.project figcaption p {
   clear: both;
 }
 
-.ng-enter {
-  animation: fadeIn 0.5s;
+.contact p {
+  max-width: 400px;
+  margin: 0 auto 2em;
 }
-
-.ng-leave {
-  animation: fadeOut 0.5s;
+.contact form fieldset {
+  max-width: 400px;
+  margin: 0 auto 1em;
+  border: 1px solid #fff;
+  padding: 1em 0;
+  color: #fff;
+  -webkit-box-shadow: 0px 7px 25px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 7px 25px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 7px 25px 0px rgba(0, 0, 0, 0.5);
+  transition: all 0.35s;
+  /* FIXME: convert to mixin to share with projects */
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#693b41+0,43303b+100&amp;0.75+0,0.9+100 */
+  background: -moz-radial-gradient(center, ellipse cover, rgba(105, 59, 65, 0.75) 0%, rgba(67, 48, 59, 0.9) 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(105, 59, 65, 0.75)), color-stop(100%, rgba(67, 48, 59, 0.9)));
+  /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(105, 59, 65, 0.75) 0%, rgba(67, 48, 59, 0.9) 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(center, ellipse cover, rgba(105, 59, 65, 0.75) 0%, rgba(67, 48, 59, 0.9) 100%);
+  /* Opera 12+ */
+  background: -ms-radial-gradient(center, ellipse cover, rgba(105, 59, 65, 0.75) 0%, rgba(67, 48, 59, 0.9) 100%);
+  /* IE10+ */
+  background: radial-gradient(ellipse at center, rgba(105, 59, 65, 0.75) 0%, rgba(67, 48, 59, 0.9) 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bf693b41', endColorstr='#e643303b',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
 }
-
-@-webkit-keyframes loadingAnimIn {
-  0% {
-    -webkit-transform: translateX(-100px);
-    transform: translateX(-100px);
-    opacity: 0;
-    box-shadow: 0 0px 0px transparent;
-  }
-  50% {
-    opacity: 1;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
-  }
-  100% {
-    -webkit-transform: translateX(100px);
-    transform: translateX(100px);
-    opacity: 0;
-    box-shadow: 0 0px 0px transparent;
-  }
+.contact form fieldset label {
+  width: 80px;
+  padding-right: 5px;
+  text-align: right;
+  font-weight: normal;
+  color: #eec3ac;
 }
-@keyframes loadingAnimIn {
-  0% {
-    -webkit-transform: translateX(-100px);
-    transform: translateX(-100px);
-    opacity: 0;
-    box-shadow: 0 0px 0px transparent;
-  }
-  50% {
-    opacity: 1;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
-  }
-  100% {
-    -webkit-transform: translateX(100px);
-    transform: translateX(100px);
-    opacity: 0;
-    box-shadow: 0 0px 0px transparent;
-  }
+.contact form fieldset input {
+  width: 300px;
 }
-.loading {
-  position: absolute;
-  top: calc(50% - 5px);
-  left: 50%;
+.contact form fieldset .textarea {
+  width: 300px;
+  height: 120px;
 }
-
-.loading .bullet {
-  position: absolute;
-  padding: 5px;
-  border-radius: 50%;
-  background: #b1646d;
-  -webkit-animation: loadingAnimIn 1.5s ease-in-out 0s infinite;
-  animation: loadingAnimIn 1.5s ease-in-out 0s infinite;
-  opacity: 0;
+.contact form fieldset .submit {
+  margin: 10px 0 0 70px;
+  border: 0;
+  text-align: center;
 }
-
-.loading .bullet:nth-child(1) {
-  -webkit-animation-delay: 0s;
-  animation-delay: 0s;
-}
-
-.loading .bullet:nth-child(2) {
-  -webkit-animation-delay: .25s;
-  animation-delay: 0.25s;
-}
-
-.loading .bullet:nth-child(3) {
-  -webkit-animation-delay: .5s;
-  animation-delay: 0.5s;
-}
-
-.loading .bullet:nth-child(4) {
-  -webkit-animation-delay: .75s;
-  animation-delay: 0.75s;
+.contact form fieldset .submit .link-button {
+  width: 100px;
 }
 
 /*# sourceMappingURL=main.css.map */
