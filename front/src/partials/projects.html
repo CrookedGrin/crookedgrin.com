@@ -14,7 +14,7 @@
 			<div class="bullet"></div>
 		</div>
 		<div class="projectWrapper">
-			<figure class="project" ng-repeat="project in projects">
+			<figure class="project" ng-repeat="project in projects | orderBy: 'priority' ">
 				<div class="thumb normal" style='background-image: url("../images/projects/{{project.id}}.jpg")'>
 					<img src="../images/shim.png" />
 				</div>
