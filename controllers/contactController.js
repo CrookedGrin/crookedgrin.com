@@ -30,13 +30,21 @@ module.exports = function(app) {
 		console.log('   ' + util.inspect(req.body, false, null));
 		mailOptions.subject = 'Web contact form: ' + req.body.name;
 		mailOptions.html = "<h1>Contact Form Submission</h1>" 
+		mailOptions.html += "<p><b>Name:</b> " + req.body.name + "</p>";
+		mailOptions.html += "<p><b>Email:</b> <a mailto:'" + req.body.email + "'>" + req.body.email + "</a></p>";
+		mailOptions.html += "<p><b>Message:</b><br><pre>" + req.body.message + "</pre></p>";
 		mailOptions.html += "<p>" + util.inspect(req.body, false, null) + "</p>";
 		transporter.sendMail(mailOptions, function(error, info) {
 			if (error) {
-				return console.log(error);
+				console.log("Error sending email. " + error);
+				res.send(500);
+			} else {
+				console.log("Email successfully sent. " + info.response);
+				res.send(200);
 			}
-			console.log("Email successfully sent. " + info.response);
-		})
+			transporter.close();
+		});
+
 	});
 
 };

@@ -689,16 +689,36 @@ figure.project figcaption p {
   clear: both;
 }
 
+.contact .view {
+  opacity: 1;
+  height: auto;
+}
+.contact .view.ng-hide-add, .contact .view.ng-hide-remove {
+  transition: all linear 0.5s;
+}
+.contact .view.ng-hide {
+  opacity: 0;
+  height: 0;
+}
+.contact .thankyou {
+  padding: 3em 1em;
+}
+.contact .thankyou h3 {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
 .contact p {
   max-width: 400px;
   margin: 0 auto 2em;
+}
+.contact p, .contact h2, .contact h3 {
+  text-align: center;
 }
 .contact form fieldset {
   max-width: 400px;
   margin: 0 auto 1em;
   border: 1px solid #fff;
   padding: 1em 0;
-  color: #fff;
   -webkit-box-shadow: 0px 7px 25px 0px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 0px 7px 25px 0px rgba(0, 0, 0, 0.5);
   box-shadow: 0px 7px 25px 0px rgba(0, 0, 0, 0.5);
@@ -726,12 +746,24 @@ figure.project figcaption p {
   text-align: right;
   font-weight: normal;
   color: #eec3ac;
+  vertical-align: top;
 }
-.contact form fieldset input {
+.contact form fieldset input, .contact form fieldset textarea {
+  -webkit-box-sizing: border-box;
+  /* For legacy WebKit based browsers */
+  -moz-box-sizing: border-box;
+  /* For legacy (Firefox <29) Gecko based browsers */
+  box-sizing: border-box;
+  -webkit-box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.5);
   width: 300px;
+  margin-bottom: 0.25em;
+  border-radius: 6px;
+  border: 1px solid #ad8f89;
+  padding: 0 6px;
 }
 .contact form fieldset .textarea {
-  width: 300px;
   height: 120px;
 }
 .contact form fieldset .submit {
