@@ -1,17 +1,24 @@
 
 <div class="content-outer">
 	<div class="contact content content-bg">
+		<a class="link-button">Test</a>
 		<h2 class="page-header uppercase textshadow">Contact</h2>
 		<div class="view" ng-hide="emailSent">
 			<p>Want to get in touch? Send me a request using the form below, and I'll get back to you as soon as I can.</p>
 			<form name="contactForm" novalidate>
 				<fieldset>
-					<label for="name">Name</label>
-					<input name="name" type="text" ng-model="contact.name"/>
-					<label for="email">Email</label>
-					<input name="email" type="text" ng-model="contact.email"/>
-					<label for="message">Message</label>
-					<textarea class="textarea" name="message" ng-model="contact.message"></textarea>
+					<div>
+						<label for="name">Name</label>
+						<input name="name" type="text" ng-model="contact.name"/>
+					</div>
+					<div>
+						<label for="email">Email</label>
+						<input name="email" type="text" ng-model="contact.email"/>
+					</div>
+					<div>
+						<label for="message">Message</label>
+						<textarea class="textarea" name="message" ng-model="contact.message"></textarea>
+					</div>
 					<div class="submit">
 						<a class="link-button" type="submit" ng-click="submit(contact)">Submit</a>
 					</div>

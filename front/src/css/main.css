@@ -283,6 +283,13 @@ h1.header {
   -moz-box-shadow: 0px 7px 25px 0px rgba(0, 0, 0, 0.5);
   box-shadow: 0px 7px 25px 0px rgba(0, 0, 0, 0.5);
 }
+.link-button:active {
+  transition: all 0.15s;
+  transform: scale(1.05) rotate(-2deg);
+  -webkit-box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.5);
+}
 
 @media (min-width: 768px) {
   .link-button {
@@ -741,7 +748,7 @@ figure.project figcaption p {
   /* IE6-9 fallback on horizontal gradient */
 }
 .contact form fieldset label {
-  width: 80px;
+  width: 22%;
   padding-right: 5px;
   text-align: right;
   font-weight: normal;
@@ -754,10 +761,10 @@ figure.project figcaption p {
   -moz-box-sizing: border-box;
   /* For legacy (Firefox <29) Gecko based browsers */
   box-sizing: border-box;
-  -webkit-box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.5);
-  box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.5);
-  width: 300px;
+  -webkit-box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.35);
+  box-shadow: inset 1px 2px 5px rgba(0, 0, 0, 0.5);
+  width: 74%;
   margin-bottom: 0.25em;
   border-radius: 6px;
   border: 1px solid #ad8f89;
