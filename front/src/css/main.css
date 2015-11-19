@@ -770,6 +770,14 @@ figure.project figcaption p {
   border: 1px solid #ad8f89;
   padding: 0 6px;
 }
+.contact form fieldset .ng-invalid.ng-touched {
+  border-color: #d42237;
+  background-color: #f48996;
+}
+.contact form fieldset .ng-pristine {
+  background-color: #fff;
+  border-color: #ad8f89;
+}
 .contact form fieldset .textarea {
   height: 120px;
 }
@@ -780,6 +788,19 @@ figure.project figcaption p {
 }
 .contact form fieldset .submit .link-button {
   width: 100px;
+}
+.contact form fieldset .submit[disabled] {
+  pointer-events: none;
+  opacity: 0.5;
+}
+.contact form fieldset button[disabled] {
+  opacity: 0.25;
+}
+.contact form fieldset .error {
+  color: #f48996;
+  margin: -2px 0 2px 0;
+  padding-left: 25%;
+  text-align: left;
 }
 
 /*# sourceMappingURL=main.css.map */

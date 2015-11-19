@@ -11,4 +11,10 @@ angular.module('cg').controller('ContactCtrl', ['$scope', '$http', function($sco
 		});
 	}
 
+	$scope.checkDisabled = function(contact) {
+		if (contact.email.$invalid) {
+			return true;
+		}
+	}
+
 }]);
