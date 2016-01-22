@@ -1,0 +1,106 @@
+.contact {
+
+	.view {
+	  opacity: 1;
+	  height: auto;
+	  min-height: 300px;
+	}
+	.view.ng-hide-add, .view.ng-hide-remove {
+	  transition: all linear 0.5s;
+	}
+	.view.ng-hide {
+	  opacity: 0;
+	  height: 0;
+	}
+
+	.thankyou {
+		padding: 3em 1em;
+		h3 {
+			margin-top: 1em;
+			margin-bottom: 1em;
+		}
+	}
+
+	p {
+		max-width: 400px;
+		margin: 0 auto 2em;
+	}
+	p, h2, h3 {
+		text-align: center;
+	}
+	form {
+		fieldset {
+			max-width: 400px;
+			margin : 0 auto 1em;
+			border: 1px solid $white;
+			padding: 1em 0;
+			-webkit-box-shadow: 0px 7px 25px 0px rgba(0,0,0,0.5);
+			-moz-box-shadow: 0px 7px 25px 0px rgba(0,0,0,0.5);
+			box-shadow: 0px 7px 25px 0px rgba(0,0,0,0.5);
+			transition: all 0.35s;
+			/* FIXME: convert to mixin to share with projects */
+			/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#693b41+0,43303b+100&amp;0.75+0,0.9+100 */
+			background: -moz-radial-gradient(center, ellipse cover,  rgba(105,59,65,0.75) 0%, rgba(67,48,59,0.9) 100%); /* FF3.6+ */
+			background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(105,59,65,0.75)), color-stop(100%,rgba(67,48,59,0.9))); /* Chrome,Safari4+ */
+			background: -webkit-radial-gradient(center, ellipse cover,  rgba(105,59,65,0.75) 0%,rgba(67,48,59,0.9) 100%); /* Chrome10+,Safari5.1+ */
+			background: -o-radial-gradient(center, ellipse cover,  rgba(105,59,65,0.75) 0%,rgba(67,48,59,0.9) 100%); /* Opera 12+ */
+			background: -ms-radial-gradient(center, ellipse cover,  rgba(105,59,65,0.75) 0%,rgba(67,48,59,0.9) 100%); /* IE10+ */
+			background: radial-gradient(ellipse at center,  rgba(105,59,65,0.75) 0%,rgba(67,48,59,0.9) 100%); /* W3C */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bf693b41', endColorstr='#e643303b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+			label {
+				width: 22%;
+				padding-right: 5px;
+				text-align: right;
+				font-weight: normal;
+				color: $paleorange;
+				vertical-align: top;
+			}
+			input, textarea {
+				-webkit-box-sizing: border-box; /* For legacy WebKit based browsers */
+				-moz-box-sizing: border-box; /* For legacy (Firefox <29) Gecko based browsers */
+				box-sizing: border-box;
+				-webkit-box-shadow: inset 0px 0px 3px rgba(0,0,0,0.35);
+				-moz-box-shadow: inset 2px 2px 3px rgba(0,0,0,0.35);
+				box-shadow: inset 1px 2px 5px rgba(0,0,0,0.5);
+				width: 74%;
+				margin-bottom: 0.25em;
+				border-radius: 6px;
+				border: 1px solid $brown;
+				padding: 0 6px;
+			}
+			.ng-invalid.ng-touched {
+				border-color: $brightred;
+				background-color: $palered;
+			}
+			.ng-pristine {
+				background-color: $white;
+				border-color: $brown;
+			}
+			.textarea {
+				height: 120px;
+			}
+			.submit {
+				margin: 10px 0 0 70px;
+				border: 0;
+				text-align: center;
+				.link-button {
+					width: 100px;
+				}
+				&[disabled] {
+					pointer-events: none;
+					opacity: 0.5;
+				}
+
+			}
+			button[disabled] {
+				opacity: 0.25;
+			}
+			.error {
+				color: $palered;
+				margin: -2px 0 2px 0;
+				padding-left: 25%;
+				text-align: left;
+			}
+		}
+	}
+}

@@ -699,6 +699,7 @@ figure.project figcaption p {
 .contact .view {
   opacity: 1;
   height: auto;
+  min-height: 300px;
 }
 .contact .view.ng-hide-add, .contact .view.ng-hide-remove {
   transition: all linear 0.5s;

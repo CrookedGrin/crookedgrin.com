@@ -13,3 +13,5 @@ config/database.js
 config/email.js
 
 node_modules
+
+.env
