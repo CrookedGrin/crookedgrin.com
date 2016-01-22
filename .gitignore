@@ -9,8 +9,6 @@ ehthumbs.db
 Thumbs.db
 
 *.psd
-config/database.js
-config/email.js
 
 node_modules
 
