@@ -10,6 +10,7 @@ $paleorange: #eec3ac;
 $brown: #ad8f89;
 $white: #fff;
 $translucentwhite: rgba(255,255,255,0.75);
+$yellow: #fffce0;
 
 $textshadow: 0px 0px 6px rgba(0, 0, 0, 0.25);
 
@@ -24,8 +25,13 @@ body {
 
 a {
 	color: $red;
+	border-radius: 4px;
+	transition: all 0.25s;
+	-webkit-transition: all 0.25s;
 	&:hover {
-		color: $orange;
+		color: $white;
+		background-color: $palered;
+		text-decoration: none;
 	}
 }
 
@@ -35,6 +41,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 h1 {
 	font-size: 25px;
+}
+h2 {
+	font-size: 20px;
 }
 
 .uppercase {
@@ -47,6 +56,10 @@ h1 {
 
 .title {
 	font-family: 'Quicksand', sans-serif !important;
+}
+
+.space-below {
+	margin-bottom: 0.5em;
 }
 
 .red {	color: $red; }

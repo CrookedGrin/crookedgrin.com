@@ -14,22 +14,34 @@ h1.header {
 }
 
 .navbar {
-	background: $green url('../images/navbar_bg.png') no-repeat;
-	background-size: contain;
-	top: 37px;
+	background: url('../images/header_bg.png') no-repeat;
+	background-size: cover;
+	top: 0;
 	right: 15px;
 	left: 15px;
-	min-height: 43px;
+	height: 1px;
+	min-height: 80px;
 	min-width: 355px;
 	border-radius: 0;
-	border-top-right-radius: 20px;
+	border-width: 0;
+	border: 0;
 	z-index: 40;
-	padding-right: 15px;
-	padding-left: 15px;
 	margin-right: auto;
 	margin-left: auto;
 	border-bottom: 3px solid $white;
 }
+
+.header-fg {
+	background: url('../images/header_fg.png') no-repeat;
+	background-size: cover;
+	position: relative;
+	height: 100%;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+}
+
 .container::after {
 	content: '';
 	width: 100%;
@@ -38,24 +50,7 @@ h1.header {
 	background-color: $white;
 	position: fixed;
 }
-@media (min-width: 768px) {
-	.container::after {
-		height: 100px;
-	}
-	.navbar {
-		width: 720px;
-	}
-}
-@media (min-width: 992px) {
-	.navbar {
-		width: 940px;
-	}
-}
-@media (min-width: 1200px) {
-	.navbar {
-		width: 1140px;
-	}
-}
+
 
 .navbar-brand {
 	display: block;
@@ -90,11 +85,11 @@ h1.header {
 		transition: all 0.25s;
 		-webkit-transition: all 0.25s;
 		padding: 0 0 0 16px;
-		color: $darkgreen;
-		opacity: 0.5;
+		color: $yellow;
+		opacity: 0.85;
 		&:hover {
 			opacity: 1;
-			color: $red !important;
+			color: $white !important;
 			background: transparent;
 			text-shadow: 1px 1px 5px rgba(0,0,0,0.2);
 			-webkit-transform: rotate(-5deg) scale(1.1);
@@ -127,26 +122,20 @@ h1.header {
 	background-size: contain;
 }
 
-
-@media (min-width: 550px) {
-	h1.header {
-		padding-top: 11px;
-	}
-}
 @media (min-width: 768px) {
-	h1.header {
-		font-size: 25px;
-	} 
-	.content-wrapper {
-		width: 750px;
-		top: 98px;
+	.container::after {
+		height: 78px;
 	}
 	.navbar {
-		top: 47px;
-		height: 53px;
+		top: 0;
+		width: 720px;
+	}
+	.content-wrapper {
+		width: 750px;
+		top: 78px;
 	}
 	.navbar-nav {
-		top: -24px;
+		top: 30px;
 		right: 24px;
 	}
 	.navbar-brand {
@@ -155,10 +144,23 @@ h1.header {
 		top: -37px;
 		left: -30px;
 	}
+
 }
 @media (min-width: 992px) {
+	.container::after {
+		height: 100px;
+	}
+	.navbar {
+		width: 940px;
+		min-height: 100px;
+	}
 	.content-wrapper {
 		width: 970px;
+		top: 100px;
+	}
+	.navbar-nav {
+		top: 40px;
+		font-size: 15px;
 	}
 	.navbar-brand {
 		width: 120px;
@@ -168,7 +170,19 @@ h1.header {
 	}
 }
 @media (min-width: 1200px) {
+	.container::after {
+		height: 121px;
+	}
+	.navbar {
+		height: 120px;
+		width: 1140px;
+	}
+	.navbar-nav {
+		top: 50px;
+		font-size: 17px;
+	}
 	.content-wrapper {
 		width: 1170px;
+		top: 121px;
 	}
 }

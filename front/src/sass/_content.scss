@@ -7,19 +7,17 @@
 	margin-bottom: 4px;
 	background: url('../images/content_bg.png') no-repeat;
 	background-size: 100% 100%;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e3e6db+25,eec3ac+100 */
+background: rgb(227,230,219); /* Old browsers */
+background: -moz-linear-gradient(left,  rgba(227,230,219,1) 25%, rgba(238,195,172,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left,  rgba(227,230,219,1) 25%,rgba(238,195,172,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right,  rgba(227,230,219,1) 25%,rgba(238,195,172,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e3e6db', endColorstr='#eec3ac',GradientType=1 ); /* IE6-9 */
+
 }
 
 .content-bg {
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#eec3ac+0,e3e6db+100 */
-	// background: rgb(238,195,172); /* Old browsers */
-	// background: -moz-radial-gradient(center, ellipse cover,  rgba(238,195,172,1) 0%, rgba(227,230,219,1) 100%); /* FF3.6+ */
-	// background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(238,195,172,1)), color-stop(100%,rgba(227,230,219,1))); /* Chrome,Safari4+ */
-	// background: -webkit-radial-gradient(center, ellipse cover,  rgba(238,195,172,1) 0%,rgba(227,230,219,1) 100%); /* Chrome10+,Safari5.1+ */
-	// background: -o-radial-gradient(center, ellipse cover,  rgba(238,195,172,1) 0%,rgba(227,230,219,1) 100%); /* Opera 12+ */
-	// background: -ms-radial-gradient(center, ellipse cover,  rgba(238,195,172,1) 0%,rgba(227,230,219,1) 100%); /* IE10+ */
-	// background: radial-gradient(ellipse at center,  rgba(238,195,172,1) 0%,rgba(227,230,219,1) 100%); /* W3C */
-	// filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eec3ac', endColorstr='#e3e6db',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-	background: $palegreen url('../images/hero.jpg') repeat-y;
+	// background: $palegreen url('../images/hero.jpg') repeat-y;
 }
 
 .page-header {

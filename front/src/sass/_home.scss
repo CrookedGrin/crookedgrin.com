@@ -1,8 +1,20 @@
+.home {
+	padding: 0;
+	.row {
+		padding: 40px;
+	}
+	p {
+		font-size: 17px;
+		line-height: 150%;
+		margin-bottom: 17px;
+	}
+}
+
 .hero {
 	position: relative;
 	background: $palegreen url('../images/hero.jpg') no-repeat 50% 50%;
 	background-size: 120% auto;
-	height: 400px;
+	height: 200px;
 	transition: all 0.5s;
 	-webkit-transition: all 0.5s;
 	display: block;
@@ -29,3 +41,10 @@
 	}
 }
 
+.illumination {
+	font-size: 50px;
+	line-height: 50px;
+	float: left;
+	display: inline-block;
+	margin-right: 20px;
+}

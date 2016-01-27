@@ -9,9 +9,14 @@ body {
 
 a {
   color: #b1646d;
+  border-radius: 4px;
+  transition: all 0.25s;
+  -webkit-transition: all 0.25s;
 }
 a:hover {
-  color: #eea785;
+  color: #fff;
+  background-color: #f48996;
+  text-decoration: none;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -21,6 +26,10 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 25px;
+}
+
+h2 {
+  font-size: 20px;
 }
 
 .uppercase {
@@ -33,6 +42,10 @@ h1 {
 
 .title {
   font-family: 'Quicksand', sans-serif !important;
+}
+
+.space-below {
+  margin-bottom: 0.5em;
 }
 
 .red {
@@ -71,21 +84,32 @@ h1.header {
 }
 
 .navbar {
-  background: #c4d4c7 url("../images/navbar_bg.png") no-repeat;
-  background-size: contain;
-  top: 37px;
+  background: url("../images/header_bg.png") no-repeat;
+  background-size: cover;
+  top: 0;
   right: 15px;
   left: 15px;
-  min-height: 43px;
+  height: 1px;
+  min-height: 80px;
   min-width: 355px;
   border-radius: 0;
-  border-top-right-radius: 20px;
+  border-width: 0;
+  border: 0;
   z-index: 40;
-  padding-right: 15px;
-  padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
   border-bottom: 3px solid #fff;
+}
+
+.header-fg {
+  background: url("../images/header_fg.png") no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
 }
 
 .container::after {
@@ -97,25 +121,6 @@ h1.header {
   position: fixed;
 }
 
-@media (min-width: 768px) {
-  .container::after {
-    height: 100px;
-  }
-
-  .navbar {
-    width: 720px;
-  }
-}
-@media (min-width: 992px) {
-  .navbar {
-    width: 940px;
-  }
-}
-@media (min-width: 1200px) {
-  .navbar {
-    width: 1140px;
-  }
-}
 .navbar-brand {
   display: block;
   background: url("../images/cg_logo_onwhite.png") no-repeat;
@@ -149,12 +154,12 @@ h1.header {
   transition: all 0.25s;
   -webkit-transition: all 0.25s;
   padding: 0 0 0 16px;
-  color: #a7b5aa;
-  opacity: 0.5;
+  color: #fffce0;
+  opacity: 0.85;
 }
 .navbar-nav > li > a:hover {
   opacity: 1;
-  color: #b1646d !important;
+  color: #fff !important;
   background: transparent;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
   -webkit-transform: rotate(-5deg) scale(1.1);
@@ -186,28 +191,23 @@ h1.header {
   background-size: contain;
 }
 
-@media (min-width: 550px) {
-  h1.header {
-    padding-top: 11px;
-  }
-}
 @media (min-width: 768px) {
-  h1.header {
-    font-size: 25px;
+  .container::after {
+    height: 78px;
+  }
+
+  .navbar {
+    top: 0;
+    width: 720px;
   }
 
   .content-wrapper {
     width: 750px;
-    top: 98px;
-  }
-
-  .navbar {
-    top: 47px;
-    height: 53px;
+    top: 78px;
   }
 
   .navbar-nav {
-    top: -24px;
+    top: 30px;
     right: 24px;
   }
 
@@ -219,8 +219,23 @@ h1.header {
   }
 }
 @media (min-width: 992px) {
+  .container::after {
+    height: 100px;
+  }
+
+  .navbar {
+    width: 940px;
+    min-height: 100px;
+  }
+
   .content-wrapper {
     width: 970px;
+    top: 100px;
+  }
+
+  .navbar-nav {
+    top: 40px;
+    font-size: 15px;
   }
 
   .navbar-brand {
@@ -231,8 +246,23 @@ h1.header {
   }
 }
 @media (min-width: 1200px) {
+  .container::after {
+    height: 121px;
+  }
+
+  .navbar {
+    height: 120px;
+    width: 1140px;
+  }
+
+  .navbar-nav {
+    top: 50px;
+    font-size: 17px;
+  }
+
   .content-wrapper {
     width: 1170px;
+    top: 121px;
   }
 }
 .content {
@@ -242,11 +272,17 @@ h1.header {
   margin-bottom: 4px;
   background: url("../images/content_bg.png") no-repeat;
   background-size: 100% 100%;
-}
-
-.content-bg {
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#eec3ac+0,e3e6db+100 */
-  background: #e3e6db url("../images/hero.jpg") repeat-y;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e3e6db+25,eec3ac+100 */
+  background: #e3e6db;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #e3e6db 25%, #eec3ac 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #e3e6db 25%, #eec3ac 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #e3e6db 25%, #eec3ac 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e3e6db', endColorstr='#eec3ac',GradientType=1 );
+  /* IE6-9 */
 }
 
 .page-header {
@@ -297,11 +333,23 @@ h1.header {
     padding: 2px 5px;
   }
 }
+.home {
+  padding: 0;
+}
+.home .row {
+  padding: 40px;
+}
+.home p {
+  font-size: 17px;
+  line-height: 150%;
+  margin-bottom: 17px;
+}
+
 .hero {
   position: relative;
   background: #e3e6db url("../images/hero.jpg") no-repeat 50% 50%;
   background-size: 120% auto;
-  height: 400px;
+  height: 200px;
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
   display: block;
@@ -326,6 +374,14 @@ h1.header {
   background-size: 90% 90%;
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
+}
+
+.illumination {
+  font-size: 50px;
+  line-height: 50px;
+  float: left;
+  display: inline-block;
+  margin-right: 20px;
 }
 
 .ng-enter {
