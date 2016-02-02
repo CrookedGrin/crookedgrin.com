@@ -349,12 +349,13 @@ h1.header {
   position: relative;
   background: #e3e6db url("../images/hero.jpg") no-repeat 50% 50%;
   background-size: 120% auto;
-  height: 200px;
+  height: 240px;
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
   display: block;
   text-align: center;
   vertical-align: middle;
+  border-bottom: 4px solid #fff;
 }
 .hero:hover {
   background-size: 100% auto;
