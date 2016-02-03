@@ -172,7 +172,7 @@ h1.header {
 
 .nav > li > a:focus, .nav > li > a:hover {
   background: none;
-  color: #eea785;
+  color: #fff;
 }
 
 .content-wrapper {
@@ -876,7 +876,7 @@ figure.project figcaption p {
 }
 .skillset ul {
   list-style-type: none;
-  margin: 0;
+  margin: 0 0 2em 0;
   padding: 0;
 }
 
