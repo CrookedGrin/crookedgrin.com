@@ -3,23 +3,218 @@
 	{
 		"selected_items":
 		[
+			[
+				"text-",
+				"text-decoration"
+			],
+			[
+				"tr",
+				"transporter"
+			],
+			[
+				"config",
+				"configEmail"
+			],
+			[
+				"conf",
+				"configEmail"
+			],
+			[
+				"con",
+				"configEmail"
+			],
+			[
+				"to",
+				"toggleLayout"
+			],
+			[
+				"trans",
+				"transform"
+			],
+			[
+				"content",
+				"content_bg"
+			],
+			[
+				"backgr",
+				"background"
+			],
+			[
+				"sc",
+				"scale"
+			],
+			[
+				"tra",
+				"translate3d"
+			],
+			[
+				"text",
+				"text-shadow"
+			],
+			[
+				"tran",
+				"translate3d"
+			],
+			[
+				"fig",
+				"figcaption"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"repeat",
+				"no-repeat"
+			],
+			[
+				"webkit",
+				"webkit-transform"
+			],
+			[
+				"padding",
+				"padding-right"
+			],
+			[
+				"navbar",
+				"navbar-brand"
+			],
+			[
+				"background",
+				"background-size"
+			],
+			[
+				"backg",
+				"background-size"
+			],
+			[
+				"project",
+				"projectService"
+			],
+			[
+				"app",
+				"appRoutes"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"new",
+				"newUser"
+			],
+			[
+				"pa",
+				"password"
+			],
+			[
+				"ne",
+				"newUser"
+			],
+			[
+				"confi",
+				"configDB"
+			],
+			[
+				"cooki",
+				"cookieParser"
+			],
+			[
+				"req",
+				"require"
+			],
+			[
+				"ta",
+				"tagsArray"
+			],
+			[
+				"id",
+				"_id"
+			],
+			[
+				"pro",
+				"projectDropdown"
+			],
+			[
+				"json",
+				"jsonParser"
+			],
+			[
+				"h",
+				"h1	Tag"
+			],
+			[
+				"p",
+				"projectSchema"
+			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "app.js",
+			"file": "front/src/index.html",
 			"settings":
 			{
-				"buffer_size": 0,
+				"buffer_size": 1658,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "package.json",
+			"file": "front/src/sass/_index.scss",
 			"settings":
 			{
-				"buffer_size": 379,
+				"buffer_size": 3051,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "front/src/sass/main.scss",
+			"settings":
+			{
+				"buffer_size": 1169,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "front/src/partials/home.html",
+			"settings":
+			{
+				"buffer_size": 1340,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "front/src/partials/projects.html",
+			"settings":
+			{
+				"buffer_size": 1538,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "front/src/sass/_home.scss",
+			"settings":
+			{
+				"buffer_size": 949,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "front/src/sass/_content.scss",
+			"settings":
+			{
+				"buffer_size": 2046,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "\n<div class=\"content-outer\">\n	<div class=\"skillset content\">\n		<h2 class=\"page-header uppercase textshadow\">Skillset</h2>\n		<h3>I'm Pretty Decent At</h3>\n		<ul>General OOPHTML, CSS/SASS JavaScript AngularJS  UI/UX design, Graphic design, Logo/Brand development, Writing</p>\n		<h3>I'm Less Good At</h3>\n		<p>Node.js, Express, Mongo, PHP, MySQL, Grunt, Cloud deployment (Heroku)</p>\n		<h3>I've Dabbled In</h3>\n		<p>DevOps, Python, Apache</p>\n	</div>\n</div>\n<footer class=\"footer\" ng-include=\"'partials/footer.html'\"></footer>",
+			"file": "front/src/partials/skillset.html",
+			"file_size": 480,
+			"file_write_time": 1454457130000000,
+			"settings":
+			{
+				"buffer_size": 523,
 				"line_ending": "Unix"
 			}
 		}
@@ -27,15 +222,19 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 0.0,
+		"height": 392.0,
 		"selected_items":
 		[
+			[
+				"",
+				"Package Control: Install Package"
+			]
 		],
-		"width": 0.0
+		"width": 449.0
 	},
 	"console":
 	{
-		"height": 0.0
+		"height": 125.0
 	},
 	"distraction_free":
 	{
@@ -48,17 +247,77 @@
 	},
 	"file_history":
 	[
-		"/Users/udarom1/cg/crookedgrin.com/package.json"
+		"/Users/udarom1/cg/crookedgrin.com/.gitignore",
+		"/Users/udarom1/cg/crookedgrin.com/config/email.js",
+		"/Users/udarom1/cg/crookedgrin.com/.env",
+		"/Users/udarom1/cg/crookedgrin.com/front/src/sass/_contact.scss",
+		"/Users/udarom1/cg/crookedgrin.com/front/src/sass/_projects.scss",
+		"/Users/udarom1/cg/crookedgrin.com/front/src/sass/_content.scss",
+		"/Users/udarom1/cg/crookedgrin.com/front/src/sass/_index.scss",
+		"/Users/udarom1/cg/crookedgrin.com/front/src/js/controllers/ContactCtrl.js",
+		"/Users/udarom1/cg/crookedgrin.com/front/src/partials/skillset.html",
+		"/Users/udarom1/cg/crookedgrin.com/front/src/partials/footer.html",
+		"/Users/udarom1/cg/crookedgrin.com/front/src/partials/projects.html",
+		"/Users/udarom1/cg/crookedgrin.com/front/src/partials/home.html",
+		"/Users/udarom1/cg/crookedgrin.com/package.json",
+		"/Users/udarom1/cg/crookedgrin.com/config/database.js",
+		"/Users/udarom1/cg/crookedgrin.com/server.js",
+		"/Users/udarom1/cg/crookedgrin.com/Procfile",
+		"/Users/udarom1/cg/crookedgrin.com/front/src/sass/main.scss",
+		"/Users/udarom1/cg/crookedgrin.com/front/src/partials/contact.html",
+		"/Users/udarom1/cg/crookedgrin.com/controllers/contactController.js",
+		"/Users/udarom1/cg/crookedgrin.com/front/src/index.html",
+		"/Users/udarom1/cg/crookedgrin.com/views/api/createProject.jade",
+		"/Users/udarom1/cg/crookedgrin.com/views/api/updateProject.jade",
+		"/Users/udarom1/cg/crookedgrin.com/front/src/js/controllers/SkillsetCtrl.js",
+		"/Users/udarom1/cg/crookedgrin.com/front/Gruntfile.js",
+		"/Users/udarom1/cg/crookedgrin.com/front/src/sass/_loading.scss",
+		"/Users/udarom1/cg/crookedgrin.com/front/src/sass/_home.scss",
+		"/Users/udarom1/cg/crookedgrin.com/front/src/js/app.js",
+		"/Users/udarom1/cg/crookedgrin.com/front/src/js/controllers/ProjectCtrl.js",
+		"/Users/udarom1/cg/crookedgrin.com/config/README",
+		"/Users/udarom1/cg/crookedgrin.com/front/src/sass/_animation.scss",
+		"/Users/udarom1/cg/crookedgrin.com/controllers/apiController.js",
+		"/Users/udarom1/cg/crookedgrin.com/bower.json",
+		"/Users/udarom1/cg/crookedgrin.com/front/src/css/main.css",
+		"/Users/udarom1/cg/crookedgrin.com/front/src/libs/bootstrap/dist/css/bootstrap.css",
+		"/Users/udarom1/cg/crookedgrin.com/front/src/images/Rectangle-21.png",
+		"/Users/udarom1/cg/crookedgrin.com/front/grunt.json",
+		"/Users/udarom1/cg/crookedgrin.com/views/index.jade",
+		"/Users/udarom1/cg/crookedgrin.com/scss/main.scss",
+		"/Users/udarom1/cg/crookedgrin.com/public/views/home.html",
+		"/Users/udarom1/cg/crookedgrin.com/public/js/app.js",
+		"/Users/udarom1/cg/crookedgrin.com/public/js/routes.js",
+		"/Users/udarom1/cg/crookedgrin.com/public/views/projects.html",
+		"/Users/udarom1/cg/crookedgrin.com/public/js/services/ProjectService.js",
+		"/Users/udarom1/cg/crookedgrin.com/public/js/controllers/MainCtrl.js",
+		"/Users/udarom1/cg/crookedgrin.com/public/js/controllers/ProjectCtrl.js",
+		"/Users/udarom1/cg/crookedgrin.com/.bowerrc",
+		"/Users/udarom1/cg/crookedgrin.com/views/api/home.jade",
+		"/Users/udarom1/cg/crookedgrin.com/config/passport.js",
+		"/Users/udarom1/cg/crookedgrin.com/views/api/apiLayout.jade",
+		"/Users/udarom1/cg/crookedgrin.com/views/api/deleteProject.jade",
+		"/Users/udarom1/cg/crookedgrin.com/models/user.js",
+		"/Users/udarom1/cg/crookedgrin.com/views/api/login.jade",
+		"/Users/udarom1/cg/crookedgrin.com/views/api/signup.jade",
+		"/Users/udarom1/cg/crookedgrin.com/public/libs/angular/index.js",
+		"/Users/udarom1/cg/crookedgrin.com/config/passport",
+		"/Users/udarom1/cg/crookedgrin.com/views/saved.jade",
+		"/Users/udarom1/cg/crookedgrin.com/views/layout.jade",
+		"/Users/udarom1/cg/crookedgrin.com/views/form.jade"
 	],
 	"find":
 	{
-		"height": 0.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
 		"height": 93.0,
 		"where_history":
 		[
+			"/Users/udarom1/cg/crookedgrin.com",
+			"/Users/udarom1/cg/crookedgrin.com/front/src/",
+			"/Users/udarom1/cg/crookedgrin.com/front/src/images"
 		]
 	},
 	"find_state":
@@ -66,6 +325,28 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"	.container::after {\n		height: 100px;\n	}\n",
+			"solid",
+			";\n",
+			"gradient-bg",
+			"%;\n",
+			"\n		",
+			"		\n",
+			";\n",
+			"rgba(227,230,219,1)",
+			"rgba(238,195,172,1)",
+			"contentOuter",
+			"gradientBg",
+			"rgba(227,230,219,1)",
+			"rgba(238,195,172,1)",
+			"rgb(238,195,172,1)",
+			"rgb(238,195,172)",
+			"			",
+			"\n",
+			"\n	",
+			"25px",
+			"var tagsArray = tags",
+			"	\n"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -73,6 +354,13 @@
 		"regex": false,
 		"replace_history":
 		[
+			"$palegreen",
+			"$paleorange",
+			"content-outer",
+			"gradient-bg",
+			"15deg",
+			"$palegreen",
+			"$paleorange"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -83,29 +371,30 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 7,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app.js",
+					"file": "front/src/index.html",
 					"settings":
 					{
-						"buffer_size": 0,
+						"buffer_size": 1658,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								1082,
+								1099
 							]
 						],
 						"settings":
 						{
-							"auto_name": "",
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -115,26 +404,184 @@
 				},
 				{
 					"buffer": 1,
-					"file": "package.json",
+					"file": "front/src/sass/_index.scss",
 					"settings":
 					{
-						"buffer_size": 379,
+						"buffer_size": 3051,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								379,
-								379
+								2988,
+								2988
 							]
 						],
 						"settings":
 						{
-							"auto_name": "",
-							"syntax": "Packages/JavaScript/JSON.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2102.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "front/src/sass/main.scss",
+					"settings":
+					{
+						"buffer_size": 1169,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								551,
+								551
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 274.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "front/src/partials/home.html",
+					"settings":
+					{
+						"buffer_size": 1340,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								177,
+								177
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "front/src/partials/projects.html",
+					"settings":
+					{
+						"buffer_size": 1538,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1,
+								28
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "front/src/sass/_home.scss",
+					"settings":
+					{
+						"buffer_size": 949,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								830,
+								830
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "front/src/sass/_content.scss",
+					"settings":
+					{
+						"buffer_size": 2046,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								873,
+								873
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "front/src/partials/skillset.html",
+					"settings":
+					{
+						"buffer_size": 523,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								160,
+								171
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -151,7 +598,7 @@
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 31.0
 	},
 	"layout":
 	{
@@ -178,7 +625,7 @@
 	"menu_visible": true,
 	"replace":
 	{
-		"height": 0.0
+		"height": 64.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -201,6 +648,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 150.0,
+	"side_bar_width": 316.0,
 	"status_bar_visible": true
 }

@@ -115,9 +115,12 @@ h1.header {
 }
 
 .footer {
+	padding: 1em;
+	color: $white;
 	display: block;
 	height: 60px;
 	width: 100%;
+	text-align: center;
 	background: $green url('../images/navbar_bg.png') no-repeat;
 	background-size: contain;
 }

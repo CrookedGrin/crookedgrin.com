@@ -48,6 +48,10 @@ h2 {
   margin-bottom: 0.5em;
 }
 
+.centered {
+  text-align: center;
+}
+
 .red {
   color: #b1646d;
 }
@@ -184,9 +188,12 @@ h1.header {
 }
 
 .footer {
+  padding: 1em;
+  color: #fff;
   display: block;
   height: 60px;
   width: 100%;
+  text-align: center;
   background: #c4d4c7 url("../images/navbar_bg.png") no-repeat;
   background-size: contain;
 }
@@ -859,6 +866,18 @@ figure.project figcaption p {
   margin: -2px 0 2px 0;
   padding-left: 25%;
   text-align: left;
+}
+
+.skillset h3 {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 0.5em;
+}
+.skillset ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 /*# sourceMappingURL=main.css.map */
