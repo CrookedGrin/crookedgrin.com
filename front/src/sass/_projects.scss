@@ -36,14 +36,11 @@ figure.project {
 	-moz-box-shadow: 0px 7px 25px 0px rgba(0,0,0,0.5);
 	box-shadow: 0px 7px 25px 0px rgba(0,0,0,0.5);
 	transition: all 0.35s;
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#693b41+0,43303b+100&amp;0.75+0,0.9+100 */
-	background: -moz-radial-gradient(center, ellipse cover,  rgba(105,59,65,0.75) 0%, rgba(67,48,59,0.9) 100%); /* FF3.6+ */
-	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(105,59,65,0.75)), color-stop(100%,rgba(67,48,59,0.9))); /* Chrome,Safari4+ */
-	background: -webkit-radial-gradient(center, ellipse cover,  rgba(105,59,65,0.75) 0%,rgba(67,48,59,0.9) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-radial-gradient(center, ellipse cover,  rgba(105,59,65,0.75) 0%,rgba(67,48,59,0.9) 100%); /* Opera 12+ */
-	background: -ms-radial-gradient(center, ellipse cover,  rgba(105,59,65,0.75) 0%,rgba(67,48,59,0.9) 100%); /* IE10+ */
-	background: radial-gradient(ellipse at center,  rgba(105,59,65,0.75) 0%,rgba(67,48,59,0.9) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bf693b41', endColorstr='#e643303b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7f6866+0,5b4d4b+100&0.75+0,0.9+100 */
+	background: -moz-linear-gradient(-45deg,  rgba(127,104,102,0.75) 0%, rgba(91,77,75,0.9) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(-45deg,  rgba(127,104,102,0.75) 0%,rgba(91,77,75,0.9) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(135deg,  rgba(127,104,102,0.75) 0%,rgba(91,77,75,0.9) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bf7f6866', endColorstr='#e65b4d4b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 	&::before, &::after {
 		content: '';
 		position: absolute;
@@ -57,13 +54,13 @@ figure.project {
 		pointer-events: none;
 	}
 	&::before {
-		border-top: 1px solid $paleorange;
-		border-bottom: 1px solid $paleorange;
+		border-top: 1px solid $pink;
+		border-bottom: 1px solid $pink;
 		transform: scale(0,1);
 	}
 	&::after {
-		border-left: 1px solid $paleorange;
-		border-right: 1px solid $paleorange;
+		border-left: 1px solid $pink;
+		border-right: 1px solid $pink;
 		transform: scale(1,0);
 	}
 	&:hover::before, &:hover::after {
@@ -137,7 +134,7 @@ figure.project {
 		}
 		p {
 			text-shadow: $textshadow;
-			color: $paleorange;
+			color: $pink;
 			transition: all 0.35s;
 
 		}
@@ -147,6 +144,9 @@ figure.project {
 
 .list-layout {
 	.view-toggle {
+		a {
+			border-radius: 0;
+		}
 		a.list {
 			opacity: 0.85;
 		}

@@ -24,19 +24,20 @@
     <script src="js/controllers/SkillsetCtrl.js"></script>
 </head>
 <body>
-    <div class="page-wrapper">
-        <div class="container">
+    <div class="page-wrapper {{currState}}-page">
 
-            <nav class="navbar navbar-fixed-top">
-                <div class="header-fg"></div>
-                <ul class="nav navbar-nav uppercase title  hidden-xs">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/projects">Projects</a></li>
-                    <li><a href="/contact">Contact</a></li>
-                    <li><a href="/skillset">Skillset</a></li>
+        <div class="container">
+            <nav class="navbar">
+                <ul class="nav navbar-nav uppercase title">
+                    <li><a class="home-link"     href="/">Home</a></li>
+                    <li><a class="projects-link" href="/projects">Projects</a></li>
+                    <li><a class="contact-link"  href="/contact">Contact</a></li>
+                    <li><a class="skillset-link" href="/skillset">Skillset</a></li>
                 </ul>
                 <!-- <a class="navbar-brand" href="/"></a> -->
             </nav>
+
+            <div class="header-fg"></div>
 
             <div class="content-wrapper" ng-view></div>
 

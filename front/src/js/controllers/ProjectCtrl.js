@@ -1,6 +1,7 @@
-angular.module('cg').controller('ProjectCtrl', ['$scope', '$projectService', function($scope, $projectService) {
+angular.module('cg').controller('ProjectCtrl', ['$scope', '$rootScope', '$projectService', function($scope, $rootScope, $projectService) {
 
-	
+	$rootScope.currState = "projects";
+
 	var projects = $projectService.getProjects().success(function(projects) {
 		angular.forEach(projects, function(project) {
 			project.tagsDisplay = project.tags.join(', ');

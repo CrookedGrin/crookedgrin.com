@@ -14,32 +14,55 @@ h1.header {
 }
 
 .navbar {
-	background: url('../images/header_bg.png') no-repeat;
-	background-size: cover;
-	top: 0;
-	right: 15px;
-	left: 15px;
-	height: 1px;
-	min-height: 80px;
+	width: 100%;
+	position: absolute;
+	top: 50px;
+	right: 0px;
+	left: 0px;
+	height: 50px;
+	min-height: 50px;
 	min-width: 355px;
 	border-radius: 0;
 	border-width: 0;
 	border: 0;
 	z-index: 40;
-	margin-right: auto;
-	margin-left: auto;
-	border-bottom: 3px solid $white;
+	margin: -25px auto 0;
+	text-align: center;
+	background: $translucentwhite;
+	outline: 1px solid $white;
+	outline-offset: 5px;
+	transition: all 0.5s ease;
+}
+
+.home-page {
+	.header-fg {
+		display: block;
+	}
+	.navbar {
+		top: 50%;
+	}
+	.header-fg {
+		height: 160px;
+		width: 100%;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+	}
 }
 
 .header-fg {
-	background: url('../images/header_fg.png') no-repeat;
-	background-size: cover;
-	position: relative;
-	height: 100%;
-	top: 0;
-	right: 0;
-	left: 0;
-	bottom: 0;
+	display: none;
+	position: absolute;
+	background: url('../images/logo.png') no-repeat center center;
+	background-size: contain;
+	height: 80px;
+	width: 200px;
+	z-index: 100;
+	top: 10px;
+	left: 0px;
+	transition: all 0.5s ease;
+	-webkit-backface-visibility: hidden;
 }
 
 .container::after {
@@ -47,59 +70,57 @@ h1.header {
 	width: 100%;
 	height: 80px;
 	z-index: 30;
-	background-color: $white;
 	position: fixed;
 }
 
 
-.navbar-brand {
-	display: block;
-	background: url('../images/cg_logo_onwhite.png') no-repeat;
-	image-rendering: auto;
-	background-size: contain;
-	position: absolute;
-	z-index: 100;
-	transition: all 0.33s;
-	-webkit-transition: all 0.33s;
-	top: -32px;
-	left: -15px;
-	width: 94px;
-	height: 94px;
-	-webkit-transform: rotate(-5deg) scale(1);
-	transform: rotate(-5deg) scale(1);
-	&:hover {
-		-webkit-transform: rotate(-20deg) scale(1.1);
-		transform: rotate(-20deg) scale(1.1);
-	}
-}
-
 //FIXME: Make mobile version
 .navbar-nav {
-	display: block;
-	position: absolute;
-	top: -30px;
-	right: 24px;
+	display: inline-block;
+	position: relative;
+	float: none;
 	text-transform: uppercase;
 	font-weight: bold;
-	>li>a {
-		transition: all 0.25s;
-		-webkit-transition: all 0.25s;
-		padding: 0 0 0 16px;
-		color: $yellow;
-		opacity: 0.85;
-		&:hover {
-			opacity: 1;
-			color: $white !important;
-			background: transparent;
-			text-shadow: 1px 1px 5px rgba(0,0,0,0.2);
-			-webkit-transform: rotate(-5deg) scale(1.1);
-			transform: rotate(-5deg) scale(1.1);
+	top: 15px;
+	margin: 0;
+	> li {
+		float: left;
+		> a {
+			transition: all 0.25s;
+			-webkit-transition: all 0.25s;
+			margin: 0 0 0 16px;
+			padding: 0 3px;
+			color: $brown;
+			opacity: 0.85;
+			&:hover {
+				opacity: 1;
+				color: $pink !important;
+				background: transparent;
+				text-shadow: 1px 1px 5px rgba(255,255,255,1);
+				-webkit-transform: rotate(-5deg) scale(1.1);
+				transform: rotate(-5deg) scale(1.1);
+			}
 		}
 	}
 
 }
 
-.nav>li>a:focus, .nav>li>a:hover {background: none; color: $white;}
+.nav>li>a:focus {
+	background: none; 
+	color: $brown;
+	border: 1px solid $brown;
+}
+.nav>li>a:hover {
+	color: $pink;
+	border: 1px solid $pink;
+	text-shadow: 1px 1px 5px rgba(255,255,255,1);
+}
+.home-page .home-link, 
+.projects-page .projects-link,
+.contact-page .contact-link,
+.skillset-page .skillset-link {
+	border: 1px solid $brown;
+}
 
 
 .content-wrapper {
@@ -107,7 +128,7 @@ h1.header {
 	position: absolute;
 	width: 100%;
 	padding-right: 30px;
-	top: 79px;
+	top: 100px;
 	min-height: 600px;
 	min-width: 385px;
 	overflow: hidden !important;
@@ -121,31 +142,18 @@ h1.header {
 	height: 60px;
 	width: 100%;
 	text-align: center;
-	background: $green url('../images/navbar_bg.png') no-repeat;
-	background-size: contain;
+	font-size: 80%;
 }
 
 @media (min-width: 768px) {
+	.header-fg {
+		display: block;
+	}
 	.container::after {
 		height: 78px;
 	}
-	.navbar {
-		top: 0;
-		width: 720px;
-	}
 	.content-wrapper {
 		width: 750px;
-		top: 78px;
-	}
-	.navbar-nav {
-		top: 30px;
-		right: 24px;
-	}
-	.navbar-brand {
-		width: 110px;
-		height: 110px;
-		top: -37px;
-		left: -30px;
 	}
 
 }
@@ -153,39 +161,15 @@ h1.header {
 	.container::after {
 		height: 100px;
 	}
-	.navbar {
-		width: 940px;
-		min-height: 100px;
-	}
 	.content-wrapper {
 		width: 970px;
-		top: 100px;
-	}
-	.navbar-nav {
-		top: 40px;
-		font-size: 15px;
-	}
-	.navbar-brand {
-		width: 120px;
-		height: 120px;
-		top: -41px;
-		left: -36px;
 	}
 }
 @media (min-width: 1200px) {
 	.container::after {
 		height: 121px;
 	}
-	.navbar {
-		height: 120px;
-		width: 1140px;
-	}
-	.navbar-nav {
-		top: 50px;
-		font-size: 17px;
-	}
 	.content-wrapper {
 		width: 1170px;
-		top: 121px;
 	}
 }

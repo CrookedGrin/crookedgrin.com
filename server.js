@@ -7,9 +7,8 @@ var session = require('express-session');
 var bodyParser = require('body-parser');
 
 /*
-Load the local .env file so we can run the server locally
-Will not return anything on production, but that's ok because
-the environment vars are already set via Heroku 
+Load the (uncommitted) local .env file so we can run the server locally
+Will not return anything on production, but that's ok because the environment vars are already set via Heroku 
 Note that an environment var called NODE_ENV has to be set in .bash_profile
 */
 if (process.env.NODE_ENV === 'development') {

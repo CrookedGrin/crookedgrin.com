@@ -1,4 +1,6 @@
-angular.module('cg').controller('ContactCtrl', ['$scope', '$http', function($scope, $http) {
+angular.module('cg').controller('ContactCtrl', ['$scope', '$rootScope', '$http', function($scope, $rootScope, $http) {
+
+	$rootScope.currState = "contact";
 
 	$scope.submit = function(formData) {
 		return $http.post('/contact', formData).then(function(response) {

@@ -1,5 +1,5 @@
-var app = angular.module('cg').controller('MainCtrl', ['$scope', function($scope) {
+var app = angular.module('cg').controller('MainCtrl', ['$scope','$rootScope', function($scope, $rootScope) {
 
-    $scope.tagline = 'To the moon and back!';   
+    $rootScope.currState = "home";
 
 }]);
