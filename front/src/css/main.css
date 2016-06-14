@@ -187,7 +187,10 @@ h1.header {
 .nav > li > a:hover {
   color: #e9b2ad;
   border: 1px solid #e9b2ad;
-  text-shadow: 1px 1px 5px white;
+  background: #fff;
+  -webkit-box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.5);
 }
 
 .home-page .home-link,
@@ -203,7 +206,6 @@ h1.header {
   width: 100%;
   padding-right: 30px;
   top: 100px;
-  min-height: 600px;
   min-width: 385px;
   overflow: hidden !important;
   z-index: 20;
@@ -281,16 +283,14 @@ h1.header {
 
 .link-button {
   display: inline-block;
-  border-radius: 15px;
-  border-bottom-left-radius: 15px;
-  border-top-left-radius: 15px;
-  border: 1px solid white;
+  border-radius: 4px;
+  border: 1px solid #907874;
   background: rgba(255, 255, 255, 0.65);
   padding: 1px 3px;
   font-family: 'Quicksand', sans-serif;
   font-weight: 600;
   font-size: 12px;
-  color: #6d4e60 !important;
+  color: #907874 !important;
   text-transform: uppercase;
   text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.25);
   transition: all 0.35s;
@@ -298,7 +298,9 @@ h1.header {
   cursor: pointer;
 }
 .link-button:hover {
-  color: #b1646d !important;
+  color: #e9b2ad !important;
+  border: 1px solid #e9b2ad;
+  background: #fff;
   z-index: 10;
   transform: scale(1.15) rotate(-3deg);
   -webkit-box-shadow: 0px 7px 25px 0px rgba(0, 0, 0, 0.5);
@@ -462,10 +464,13 @@ h1.header {
 }
 .view-toggle a {
   display: inline-block;
+  margin-left: 6px;
   width: 20px;
   height: 20px;
+  background: transparent;
   background-size: cover;
   transition: all 0.35s;
+  border-radius: 0;
 }
 .view-toggle a:hover {
   opacity: 1;
@@ -599,9 +604,6 @@ figure.project figcaption p {
   transition: all 0.35s;
 }
 
-.list-layout .view-toggle a {
-  border-radius: 0;
-}
 .list-layout .view-toggle a.list {
   opacity: 0.85;
 }

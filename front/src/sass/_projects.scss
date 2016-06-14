@@ -10,10 +10,13 @@
 	right: 30px;
 	a {
 		display: inline-block;
+		margin-left: 6px;
 		width: 20px;
 		height: 20px;
+		background: transparent;
 		background-size: cover;
 		transition: all 0.35s;
+		border-radius: 0;
 		&:hover {
 			opacity: 1;
 			transform: scale(1.25);
@@ -144,9 +147,6 @@ figure.project {
 
 .list-layout {
 	.view-toggle {
-		a {
-			border-radius: 0;
-		}
 		a.list {
 			opacity: 0.85;
 		}

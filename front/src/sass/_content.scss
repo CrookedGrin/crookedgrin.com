@@ -30,23 +30,23 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e3e6db', end
 
 .link-button {
 	display: inline-block;
-	border-radius: 15px;
-	border-bottom-left-radius: 15px;
-	border-top-left-radius: 15px;
-	border: 1px solid white;
+	border-radius: 4px;
+	border: 1px solid $brown;
 	background: $translucentwhite;
 	padding: 1px 3px;
 	font-family: 'Quicksand', sans-serif;
 	font-weight: 600;
 	font-size: 12px;
-	color: $purple !important;
+	color: $brown !important;
 	text-transform: uppercase;
 	text-shadow: $textshadow;
 	transition: all 0.35s;
 	text-decoration: none !important;
 	cursor: pointer;
 	&:hover {
-		color: $red !important;
+		color: $pink !important;
+		border: 1px solid $pink;
+		background: $white;
 		z-index: 10;
 		transform: scale(1.15) rotate(-3deg);
 		-webkit-box-shadow: 0px 7px 25px 0px rgba(0,0,0,0.5);
