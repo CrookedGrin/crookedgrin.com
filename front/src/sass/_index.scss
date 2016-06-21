@@ -1,4 +1,5 @@
 .page-wrapper {
+	min-width: 100%;
 	min-height: 100%;
 	height: auto !important;
 	height: 100%;
@@ -96,7 +97,6 @@ h1.header {
 				opacity: 1;
 				color: $pink !important;
 				background: transparent;
-				text-shadow: 1px 1px 5px rgba(255,255,255,1);
 				-webkit-transform: rotate(-5deg) scale(1.1);
 				transform: rotate(-5deg) scale(1.1);
 			}
@@ -114,9 +114,9 @@ h1.header {
 	color: $pink;
 	border: 1px solid $pink;
 	background: $white;
-	-webkit-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.35);
-	-moz-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.35);
-	box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.35);
+	-webkit-box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.35);
+	-moz-box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.35);
+	box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.35);
 
 }
 .home-page .home-link, 

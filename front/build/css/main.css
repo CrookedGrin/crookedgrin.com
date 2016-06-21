@@ -1,7 +1,6 @@
 html {
   width: 100%;
   height: 100%;
-  min-width: 400px;
   min-height: 100%;
   background: url("../images/bg_lg.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -15,6 +14,11 @@ body {
   color: #6d4e60;
 }
 
+@media (max-width: 420px) {
+  .container {
+    width: 100%;
+  }
+}
 a {
   color: #b1646d;
   border-radius: 4px;
@@ -81,6 +85,7 @@ h2 {
 }
 
 .page-wrapper {
+  min-width: 100%;
   min-height: 100%;
   height: auto !important;
   height: 100%;
@@ -177,7 +182,6 @@ h1.header {
   opacity: 1;
   color: #e9b2ad !important;
   background: transparent;
-  text-shadow: 1px 1px 5px white;
   -webkit-transform: rotate(-5deg) scale(1.1);
   transform: rotate(-5deg) scale(1.1);
 }
@@ -192,9 +196,9 @@ h1.header {
   color: #e9b2ad;
   border: 1px solid #e9b2ad;
   background: #fff;
-  -webkit-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.35);
-  -moz-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.35);
-  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.35);
+  -webkit-box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.35);
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.35);
 }
 
 .home-page .home-link,
