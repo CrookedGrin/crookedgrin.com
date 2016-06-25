@@ -3,7 +3,8 @@ var gulp = require('gulp'),
 	sass = require('gulp-sass'),
 	watch = require('gulp-watch'),
 	uglify = require('gulp-uglify'),
-	concat = require('gulp-concat')
+	concat = require('gulp-concat'),
+	livereload = require('gulp-livereload')
 
 var bases = {
 	src: 'src/',
@@ -16,7 +17,7 @@ var paths = {
 	css: ['css/*.css'],
 	sass: ['sass/**/*.scss'],
 	srcAll: ['**/*', '!sass', '!sass/**', '!**/config.rb', '!**/*.psd'],
-	watchPath: ['src/**/*', '!src/css/main.css**']
+	watchPath: ['src/*', 'src/**/*', '!src/css/main.css**']
 };
 
 gulp.task('clean', function() {
@@ -39,10 +40,12 @@ gulp.task('scripts', ['clean'], function() {
 
 gulp.task('copy', ['clean', 'sass'], function() {
 	return gulp.src(paths.srcAll, {cwd: bases.src})
-	.pipe(gulp.dest(bases.dist));
+	.pipe(gulp.dest(bases.dist))
+	.pipe(livereload());
 });
 
 gulp.task('watch', function() {
+	livereload.listen();
 	gulp.watch(paths.watchPath, ['default']);
 })
 
