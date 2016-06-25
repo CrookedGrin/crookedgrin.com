@@ -20,7 +20,7 @@ if (app.get('env') === 'development') {
 	app.locals.pretty = true;
 }
 
-app.use('/', express.static(__dirname + '/front/build/'));
+app.use('/', express.static(__dirname + '/front/dist/'));
 
 app.use(cookieParser());
 app.use(bodyParser());
