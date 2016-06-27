@@ -24,10 +24,5 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
 
 }]);
 
-app.controller('MainCtrl', ['$scope', function($scope) {
-	$scope.msg = "Hi dude!"
-}]);
-
-
 
 
