@@ -684,13 +684,19 @@ figure.project {
     padding-left: 25%;
     text-align: left; }
 
-.skillset h3 {
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 16px;
-  margin-bottom: 0.5em; }
-
-.skillset ul {
-  list-style-type: none;
-  margin: 0 0 2em 0;
-  padding: 0; }
+.skillset .col {
+  border-radius: 8px;
+  border: 1px solid #907874;
+  height: 240px;
+  margin-bottom: 1em; }
+  .skillset .col h3 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0.5em 0;
+    border-bottom: 1px dotted #907874;
+    padding-bottom: 0.5em; }
+  .skillset .col ul {
+    list-style-type: none;
+    margin: 0 0 2em 0;
+    padding: 0; }

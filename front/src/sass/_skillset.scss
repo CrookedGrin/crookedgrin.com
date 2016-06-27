@@ -1,13 +1,21 @@
 .skillset {
-	h3 {
-		text-transform: uppercase;
-		font-weight: bold;
-		font-size: 16px;
-		margin-bottom: 0.5em;
-	}
-	ul {
-		list-style-type: none;
-		margin: 0 0 2em 0;
-		padding: 0;
+	.col {
+		border-radius: 8px;
+		border: 1px solid $brown;
+		height: 240px;
+		margin-bottom: 1em;
+		h3 {
+			text-transform: uppercase;
+			font-weight: bold;
+			font-size: 16px;
+			margin: 0.5em 0;
+			border-bottom: 1px dotted $brown;
+			padding-bottom: 0.5em;
+		}
+		ul {
+			list-style-type: none;
+			margin: 0 0 2em 0;
+			padding: 0;
+		}
 	}
 }
