@@ -126,6 +126,8 @@ h1.header {
   left: 0px;
   transition: all 0.5s ease;
   -webkit-backface-visibility: hidden; }
+  .header-fg:hover {
+    background-color: transparent; }
 
 .container::after {
   content: '';
