@@ -294,6 +294,9 @@ h1.header {
 .ng-leave {
   animation: fadeOutRight 0.75s; }
 
+body {
+  overflow-x: hidden; }
+
 @-webkit-keyframes loadingAnimIn {
   0% {
     -webkit-transform: translateX(-100px);

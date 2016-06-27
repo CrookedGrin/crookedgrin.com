@@ -5,3 +5,7 @@
 .ng-leave {
 	animation: fadeOutRight 0.75s; 
 }
+
+body {
+	overflow-x: hidden; // to prevent scrollbars during animation
+}
