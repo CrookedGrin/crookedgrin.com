@@ -83,13 +83,9 @@
 				.link-button {
 					width: 100px;
 				}
-				&[disabled] {
-					pointer-events: none;
-					opacity: 0.5;
-				}
-
 			}
 			button[disabled] {
+				pointer-events: none;
 				opacity: 0.25;
 				&:hover { // Reset to original state (no hover effects)
 					border: 1px solid $brown;

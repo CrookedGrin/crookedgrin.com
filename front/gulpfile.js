@@ -1,10 +1,12 @@
 var gulp = require('gulp'),
 	clean = require('gulp-clean'),
 	sass = require('gulp-sass'),
+	sourcemaps = require('gulp-sourcemaps'),
 	watch = require('gulp-watch'),
 	uglify = require('gulp-uglify'),
 	concat = require('gulp-concat'),
 	livereload = require('gulp-livereload')
+
 
 var bases = {
 	src: 'src/',
@@ -27,9 +29,9 @@ gulp.task('clean', function() {
 
 gulp.task('sass', ['clean'], function() {
 	return gulp.src(paths.sass, {cwd: bases.src})
-	.pipe(sass({
-		sourcemap: true
-	}).on('error', sass.logError))
+	.pipe(sourcemaps.init())
+	.pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+	.pipe(sourcemaps.write())
 	.pipe(gulp.dest(bases.css));
 })
 
