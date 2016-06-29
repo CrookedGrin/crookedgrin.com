@@ -91,6 +91,15 @@
 			}
 			button[disabled] {
 				opacity: 0.25;
+				&:hover { // Reset to original state (no hover effects)
+					border: 1px solid $brown;
+					background: rgba(255,255,255,0.85);
+					color: $brown !important;
+					transform: none;
+					-webkit-box-shadow: none;
+					-moz-box-shadow: none;
+					box-shadow: none;
+				}
 			}
 			.error {
 				color: $palered;

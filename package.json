@@ -18,9 +18,11 @@
     "express-session": "^1.11.3",
     "jade": "^1.11.0",
     "mongoose": "^4.1.10",
-    "nodemailer": "^1.10.0",
+    "nodemailer": "^1.11.0",
+    "nodemailer-mailgun-transport": "^1.2.0",
     "passport": "^0.3.0",
-    "passport-local": "^1.0.0"
+    "passport-local": "^1.0.0",
+    "xoauth2": "^1.1.0"
   },
   "devDependencies": {
     "jasmine-node": "^1.14.5"

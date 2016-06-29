@@ -27,7 +27,9 @@ gulp.task('clean', function() {
 
 gulp.task('sass', ['clean'], function() {
 	return gulp.src(paths.sass, {cwd: bases.src})
-	.pipe(sass().on('error', sass.logError))
+	.pipe(sass({
+		sourcemap: true
+	}).on('error', sass.logError))
 	.pipe(gulp.dest(bases.css));
 })
 
