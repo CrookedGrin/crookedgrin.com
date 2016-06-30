@@ -56,7 +56,7 @@ var contactController = require('./controllers/contactController');
 contactController(app);
 
 app.get('*', function(req, res) {
-	res.sendFile(__dirname + '/front/build/index.html');
+	res.sendFile(__dirname + '/front/dist/index.html');
 });
 
 var port = process.env.PORT || 3000;
