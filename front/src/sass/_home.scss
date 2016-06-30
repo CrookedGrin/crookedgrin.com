@@ -6,14 +6,15 @@
 
 .home-content {
     position: absolute;
-    top: calc(50% + 80px);
+    top: calc(50% + 31px);
     left: 20%;
     right: 20%;
     font-size: 1.15em;
     color: darken($brown, 10%);
     text-align: center;
     padding: 2em;
-    border-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
     background: $translucentwhite;
     text-shadow: 0 0 10px rgba(255,255,255,1);
 	opacity: 0;
