@@ -35,37 +35,49 @@ h1.header {
 	transition: all 0.5s ease;
 }
 
-.home-page {
-	.header-fg {
-		display: block;
+.header-fg {
+	display: none;
+	position: absolute;
+	background: url('../images/logo.png') no-repeat center center;
+	background-size: contain;
+	height: 20%;
+	width: 50%;
+	right: 0;
+	margin: 0 auto;
+	z-index: 100;
+	top: -100px;
+	left: 0px;
+	opacity: 0;
+	transition: all 0.5s ease;
+	-webkit-backface-visibility: hidden;
+	&:hover {
+		background-color: transparent;
 	}
+}
+
+.home-page {
 	.navbar {
 		top: 50%;
 	}
 	.header-fg {
+		display: block;
 		height: 25%;
 		width: 100%;
 		top: 5%;
 		right: 0;
 		left: 0;
 		bottom: 0;
+		opacity: 1;
 	}
 }
 
-.header-fg {
-	display: none;
-	position: absolute;
-	background: url('../images/logo.png') no-repeat center center;
-	background-size: contain;
-	height: 80px;
-	width: 200px;
-	z-index: 100;
-	top: 10px;
-	left: 0px;
-	transition: all 0.5s ease;
-	-webkit-backface-visibility: hidden;
-	&:hover {
-		background-color: transparent;
+.projects-page, .contact-page, .skillset-page {
+	.header-fg {
+		height: 80px;
+		width: 200px;
+		margin: 0;
+		opacity: 1;
+		top: 10px;
 	}
 }
 
