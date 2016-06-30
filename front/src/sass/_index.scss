@@ -32,7 +32,7 @@ h1.header {
 	background: $translucentwhite;
 	outline: 1px solid $white;
 	outline-offset: 5px;
-	transition: all 0.65s ease;
+	transition: all 0.65s;
 }
 
 .header-fg {
@@ -42,14 +42,13 @@ h1.header {
 	background-size: contain;
 	height: 20%;
 	width: 50%;
-	right: 0;
 	margin: 0 auto;
 	z-index: 100;
 	top: -100px;
-	left: 0px;
 	opacity: 0;
-	transition: all 0.5s ease;
+	transition: all 0.75s;
 	-webkit-backface-visibility: hidden;
+	pointer-events: auto;
 	&:hover {
 		background-color: transparent;
 	}
@@ -64,10 +63,8 @@ h1.header {
 		height: 25%;
 		width: 100%;
 		top: 5%;
-		right: 0;
-		left: 0;
-		bottom: 0;
 		opacity: 1;
+		pointer-events: none;
 	}
 }
 
@@ -139,6 +136,7 @@ h1.header {
 .contact-page .contact-link,
 .skillset-page .skillset-link {
 	border: 1px solid $brown;
+	pointer-events: none;
 }
 
 

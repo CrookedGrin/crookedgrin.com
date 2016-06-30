@@ -1,12 +1,15 @@
 .home-page {
 	.home-content {
 	    opacity: 1;
+    	top: calc(50% + 36px);
+    	height: auto;
 	}
 }
 
 .home-content {
     position: absolute;
-    top: calc(50% + 36px);
+    top: 0px;
+    height: 1px;
     left: 20%;
     right: 20%;
     font-size: 1.15em;
@@ -18,7 +21,7 @@
     background: $translucentwhite;
     text-shadow: 0 0 10px rgba(255,255,255,1);
 	opacity: 0;
-    transition: all 0.75s;
+    transition: all 0.65s;
 }
 
 
