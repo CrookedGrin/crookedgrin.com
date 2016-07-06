@@ -63,6 +63,10 @@ h2 {
 	font-size: 20px;
 }
 
+input:focus {
+	outline: none;
+}
+
 .uppercase {
 	text-transform: uppercase;
 }

@@ -6,6 +6,9 @@
 			<a class="grid" href="" ng-click="toggleLayout('grid-layout')"></a>
 		</div>
 		<h2 class="page-header uppercase textshadow">Projects</h2>
+		<div class="filter">
+			<input name="filter" ng-model="projectFilter" placeholder="FILTER">
+		</div>
 		<!--FIXME: Replace with template -->
 		<div class="loading" ng-hide="dataLoaded">
 			<div class="bullet"></div>
@@ -14,7 +17,7 @@
 			<div class="bullet"></div>
 		</div>
 		<div class="projectWrapper">
-			<figure class="project" ng-repeat="project in projects | orderBy: 'priority' ">
+			<figure class="project" ng-repeat="project in projects | orderBy: 'priority' | filter: projectFilter ">
 				<div class="thumb normal" style='background-image: url("../images/projects/{{project.id}}.jpg")'>
 					<img src="../images/shim.png" />
 				</div>
