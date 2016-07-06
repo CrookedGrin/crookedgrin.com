@@ -21,5 +21,15 @@ angular.module('cg').controller('ProjectCtrl', ['$scope', '$rootScope', '$projec
 	}
 	$scope.toggleLayout('list-layout');
 
+	$scope.filterFxn = function(item) {
+		debugger;
+		if (!$scope.filterQuery || 
+			(item.name.toLowerCase().indexOf($scope.filterQuery) != -1) || 
+			(item.tags.toString().toLowerCase().indexOf($scope.filterQuery) != -1)) {
+				return true;
+			}
+		return false;
+	}
+
 
 }]);

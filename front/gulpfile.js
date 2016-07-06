@@ -37,8 +37,10 @@ gulp.task('sass', ['clean'], function() {
 
 gulp.task('scripts', ['clean'], function() {
 	return gulp.src(paths.js, {cwd: bases.src})
+	.pipe(sourcemaps.init())
 	.pipe(uglify())
 	.pipe(concat('app.min.js'))
+	.pipe(sourcemaps.write())
 	.pipe(gulp.dest(bases.dist + 'scripts/'));
 })
 
